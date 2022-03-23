@@ -27,11 +27,14 @@
                 <table class="table-auto">
                     <tr class="bg-blue-100">
 
-                        <th class="w-1/2 border-4 border-gray-500">
+                        <th class="w-1/4 border-4 border-gray-500">
                             Model
                         </th>
-                        <th class="w-1/2 border-4 border-gray-500">
+                        <th class="w-1/4 border-4 border-gray-500">
                             Engines
+                        </th>
+                        <th class="w-1/4 border-4 border-gray-500">
+                            Dates
                         </th>
                     </tr>
 
@@ -50,6 +53,11 @@
                                     @endif
                                 @endforeach
                             </td>
+
+                            <td class="border-4 border-gray-500">
+                                {{ date('d-m-Y', strtotime($car->productionDate->created_at)) }}
+
+                            </td>
                         </tr>
                     @empty
                         <p>
@@ -60,6 +68,17 @@
                 </table>
              
             </ul>
+
+            <p class="text-left">Product Types:
+                @forelse ($car->products as $product )
+                    {{ $product->name }}
+                @empty
+                <p>
+                    No car product description
+                </p>
+                    
+                @endforelse
+            </p>
             <hr class="mt-4 mb-8">
         </div>
 

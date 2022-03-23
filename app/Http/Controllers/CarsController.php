@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use App\Models\product;
 use Illuminate\Http\Request;
 
 class CarsController extends Controller
@@ -70,7 +71,9 @@ class CarsController extends Controller
       
         
         $car = Car::find($id);
-      
+        $products = product::find($id);
+
+        print_r($products);
         return view('cars.show')->with('car', $car);
     }
 
