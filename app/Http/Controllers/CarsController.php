@@ -14,8 +14,10 @@ class CarsController extends Controller
      */
     public function index()
     {
-        $cars = Car::all();
-
+       
+        $cars = Car::all()->toJson();
+        $cars = json_decode($cars);
+       // var_dump($cars);
         //dd($cars);
         return view('cars.index', [
             'cars' => $cars,
@@ -40,7 +42,20 @@ class CarsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // //dd('OK');
+        // $car = new Car;
+        // $car->name = $request->input('name');
+        // $car->founded = $request->input('founded');
+        // $car->description = $request->input('description');
+        // $car->save();
+
+        $car = Car::create([
+            'name' => $request->input('name'),
+            'founded' => $request->input('founded'),
+            'description' => $request->input('description')
+        ]);
+
+        return redirect('/cars');
     }
 
     /**
@@ -51,7 +66,12 @@ class CarsController extends Controller
      */
     public function show($id)
     {
-        //
+
+      
+        
+        $car = Car::find($id);
+      
+        return view('cars.show')->with('car', $car);
     }
 
     /**
@@ -62,7 +82,9 @@ class CarsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $car = Car::find($id);
+    
+        return view('cars.edit')->with('car', $car);
     }
 
     /**
@@ -74,7 +96,12 @@ class CarsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Car::where('id', $id)->update([
+            'name' => $request->input('name'),
+            'founded' => $request->input('founded'),
+            'description' => $request->input('description')
+        ]);
+        return redirect('/cars');
     }
 
     /**
@@ -83,8 +110,10 @@ class CarsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Car $car)
     {
-        //
+ 
+        $car->delete();
+        return redirect('/cars');
     }
 }
