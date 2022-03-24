@@ -15,6 +15,9 @@ use App\Http\Controllers\PagesController;
 |
 */
 
-Route::resource('/', CarsController::class);
+// Route::get('/', function(){
+//     return view('index');
+// });
 
-Route::get('/properties', [PagesController::class, 'index']);
+Route::get('/', [PagesController::class, 'index']);
+Route::get('/properties', [PagesController::class, 'properties']);

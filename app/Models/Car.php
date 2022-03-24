@@ -26,7 +26,7 @@ class Car extends Model
    ];
 
    public function carModels(){
-       return $this->hasMany(CarModel::class, );
+       return $this->hasMany(CarModel::class);
    }
 
    public function engines(){

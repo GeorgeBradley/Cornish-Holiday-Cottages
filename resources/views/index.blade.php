@@ -24,13 +24,16 @@
                         <!-- <button class="btn">Start your search</button> -->
                         <button class="btn m-t-1">Learn More</button>
                     </div>
-                    <img src="/images/cottage6.jpeg" alt="" class="img-overlay">
+                    <img src="{{ asset('/images/cottages/cottage6.jpeg') }}" alt="" class="img-overlay">
                 </li>
                 <li class="carousel-item">
-                    <img src="/images/cottage-night-time.jpeg" alt="">
+                    <img src="{{ asset('images/testimonials/cottage-dark.jpeg') }}" alt="">
+                </li>
+                    <li class="carousel-item">
+                    <img src="{{ asset('images/cottages/cottage1.jpeg') }}" alt="">
                 </li>
                 <li class="carousel-item">
-                    <img src="/images/beach.jpeg" alt="">
+                    <img src="{{ asset('images/cottages/cottage4.jpeg') }}" alt="">
                 </li>
                 <li class="carousel-item">
                     <img src="/images/dock.jpeg" alt="">
