@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>Document</title>
 </head>
-<body class="bg-gradient-to-r from-gray-100 to-gray-200">
-    
+<body>
+
+   @include('layouts.header')
+
     @yield('content')
+
+    @include('layouts.footer')
+    
+    <script src="{{ asset('js/app.js') }}"> </script>
+    
 </body>
 </html>

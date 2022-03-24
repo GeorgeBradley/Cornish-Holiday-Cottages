@@ -1,0 +1,31 @@
+
+
+footer {
+    width:100%;
+    a {
+        color:white;
+    }
+    &-nav-list-1 {
+        margin-left:auto;
+    }
+    &-nav-list-2 {
+        margin-right:auto;
+    }
+    .sm-links {
+        i {
+            font-size:2rem;
+        }
+    }
+  
+  
+}
+
+.footer-mobile {
+    @include breakpoint-down(small){
+        display:block;
+        text-align: center;
+    }
+    
+   
+
+}

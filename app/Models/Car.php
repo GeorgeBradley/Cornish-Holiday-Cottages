@@ -17,7 +17,7 @@ class Car extends Model
 
    protected $fillable = [
 
-    'name', 'founded', 'description'
+    'name', 'founded', 'description', 'image_path'
 
    ];
 
