@@ -5,25 +5,24 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PropertyImages extends Model
+class WebsiteTestimonials extends Model
 {
     use HasFactory;
 
-    
-    protected $table = 'property_images';
+    protected $table = 'website_tesimonials';
     protected $primaryKey = 'id';
 
    // protected $timestamps = false;
  
 
-  
+   protected $fillable = [
+
+    'nameOfPerson', 'rating', 'rating', 'imagePath'
+
+   ];
 
    protected $hidden = [
      
    ];
-   protected $fillable = [
 
-    'propertyID', 'imagePath'
-
-   ];
 }

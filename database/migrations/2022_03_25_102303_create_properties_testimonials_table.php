@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePropertyImagesTable extends Migration
+class CreatePropertiesTestimonialsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,19 @@ class CreatePropertyImagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('property_images', function (Blueprint $table){
+        Schema::create('properties_testimonials', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('propertyID');
+            $table->string('nameOfPerson');
+            $table->integer('rating');
+            $table->string('testimony');
             $table->string('imagePath');
             $table->timestamps();
+
             $table->foreign('propertyID')->references('propertyID')->on('properties')
             ->onDelete('cascade');
-                    });
+                   
+        });
     }
 
     /**
@@ -30,6 +35,6 @@ class CreatePropertyImagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('property_images');
+        Schema::dropIfExists('properties_testimonials');
     }
 }

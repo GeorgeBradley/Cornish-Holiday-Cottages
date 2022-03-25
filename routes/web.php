@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PropertiesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,4 @@ use App\Http\Controllers\PagesController;
 // });
 
 Route::get('/', [PagesController::class, 'index']);
-Route::get('/properties', [PagesController::class, 'properties']);
+Route::get('/properties', [PropertiesController::class, 'show']);

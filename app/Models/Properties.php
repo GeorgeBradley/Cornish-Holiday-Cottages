@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\PropertyImages;
+use App\Models\PropertiesTestimonials;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Properties extends Model
 {
@@ -16,7 +18,13 @@ class Properties extends Model
 
    protected $fillable = [
 
-    'propertyName', 'location', 'description', 'property_image'
+    'propertyName', 
+    'aboutInfo', 
+    'allowPets', 
+    'numberOfSleeps', 
+    'numberOfBedrooms',
+    'propertyLocation', 
+    'property_image'
 
    ];
 
@@ -27,6 +35,9 @@ class Properties extends Model
    public function propertyImages(){
        return $this->hasMany(PropertyImages::class );
    }
+   public function propertyTestimonials(){
+    return $this->hasMany(PropertiesTestimonials::class);
+}
 
 //    public function engines(){
 

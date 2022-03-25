@@ -16,7 +16,14 @@ class CreatePropertiesTable extends Migration
         Schema::create('properties', function (Blueprint $table) {
             $table->increments('propertyID');
             $table->string('propertyName');
-            $table->string('propertyLocation');
+            $table->unsignedInteger('cost');
+            $table->string('aboutInfo');
+            $table->boolean('allowPets');
+            $table->string('imagePath');
+            $table->unsignedInteger('numberOfSleeps');
+            $table->unsignedInteger('numberOfBedrooms');
+            $table->unsignedInteger('numberOfBathrooms');
+            $table->string('location');
             $table->timestamps();
         });
     }
