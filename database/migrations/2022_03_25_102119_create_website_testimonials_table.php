@@ -15,10 +15,10 @@ class CreateWebsiteTestimonialsTable extends Migration
     {
         Schema::create('website_testimonials', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nameOfPerson');
+            $table->string('name_of_person');
             $table->integer('rating');
             $table->string('testimony');
-            $table->string('imagePath');
+            $table->string('image_path');
             $table->timestamps();
 
         });

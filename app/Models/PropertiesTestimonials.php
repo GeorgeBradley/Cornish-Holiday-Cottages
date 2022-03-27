@@ -17,11 +17,18 @@ class PropertiesTestimonials extends Model
 
    protected $fillable = [
 
-    'nameOfPerson', 'rating', 'testimony', 'imagePath'
+  
+    'name_of_person',
+
+   
+    'rating', 
+    'testimony', 
+    'image_path'
 
    ];
    public function property()
     {
+     
         return $this->belongsTo(Properties::class);
     }
    protected $hidden = [

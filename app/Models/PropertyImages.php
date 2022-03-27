@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Properties;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class PropertyImages extends Model
 {
@@ -16,14 +17,17 @@ class PropertyImages extends Model
    // protected $timestamps = false;
  
 
-  
-
+   public function property()
+   {
+       return $this->belongsTo(Properties::class);
+   }
    protected $hidden = [
      
    ];
    protected $fillable = [
 
-    'propertyID', 'imagePath'
+        
+        'image_path'
 
    ];
 }

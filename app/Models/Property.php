@@ -2,29 +2,33 @@
 
 namespace App\Models;
 
-use App\Models\PropertyImages;
+
 use App\Models\PropertiesTestimonials;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Properties extends Model
+class Property extends Model
 {
     use HasFactory;
     protected $table = 'properties';
-    protected $primaryKey = 'propertyID';
+    protected $primaryKey = 'id';
 
    // protected $timestamps = false;
  
 
    protected $fillable = [
 
-    'propertyName', 
-    'aboutInfo', 
-    'allowPets', 
-    'numberOfSleeps', 
-    'numberOfBedrooms',
-    'propertyLocation', 
-    'property_image'
+    'property_name',
+    'cost',
+    'about_info',
+    
+    'allow_pets', 
+    'image_path',
+    'number_of_sleeps',
+    'number_of_bedrooms',
+    'number_of_bathrooms',
+    'location', 
+   
 
    ];
 
@@ -32,22 +36,16 @@ class Properties extends Model
      
    ];
 
+   
+
+   
+
    public function propertyImages(){
-       return $this->hasMany(PropertyImages::class );
-   }
-   public function propertyTestimonials(){
-    return $this->hasMany(PropertiesTestimonials::class);
-}
 
-//    public function engines(){
-
-//     return $this->hasManyThrough(
-//         Engine::class, 
-//         CarModel::class,
-//         'car_id', //Foreign key on CarModel table
-//         'model_id'
-//     ); //Foreign key on engine table
-//    }
+    return $this->hasMany(PropertyImages::class) //Foreign key on CarModel table
+       
+     ; //Foreign key on engine table
+    }
    
 //    public function productionDate(){
 //        return $this->hasOneThrough(CarProductionDate::class,

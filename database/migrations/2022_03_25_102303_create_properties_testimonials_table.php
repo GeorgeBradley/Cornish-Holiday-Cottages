@@ -15,14 +15,13 @@ class CreatePropertiesTestimonialsTable extends Migration
     {
         Schema::create('properties_testimonials', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('propertyID');
-            $table->string('nameOfPerson');
+            $table->unsignedInteger('property_id');
+            $table->string('name_of_person');
             $table->integer('rating');
             $table->string('testimony');
-            $table->string('imagePath');
+            $table->string('image_path');
             $table->timestamps();
-
-            $table->foreign('propertyID')->references('propertyID')->on('properties')
+            $table->foreign('property_id')->references('id')->on('properties')
             ->onDelete('cascade');
                    
         });
