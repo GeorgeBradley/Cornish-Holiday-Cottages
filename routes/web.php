@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarsController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PropertyController;
 
@@ -21,6 +22,8 @@ use App\Http\Controllers\PropertyController;
 // });
 
 Route::get('/', [PagesController::class, 'index']);
+
+Route::get('/login', [LoginController::class, 'index']);
 Route::get('/properties', [PropertyController::class, 'show']);
 Route::get('/property/{property}', [PropertyController::class, 'property']);
 

@@ -3445,3 +3445,16 @@ p {
 .sm\:justify-between {
   justify-content: space-between;
 }
+
+.login-form {
+  width: 100%;
+  background-color: aliceblue;
+  height: 80vh;
+}
+.login-form .form-controls {
+  width: 25%;
+  gap: 10px;
+}
+.login-form .form-controls input {
+  padding: 10px;
+}

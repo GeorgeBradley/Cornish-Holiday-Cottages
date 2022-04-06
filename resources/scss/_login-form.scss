@@ -1,0 +1,15 @@
+.login-form {
+    width:100%;
+    background-color: aliceblue;
+    
+    height:calc(100vh - 20vh);
+
+   .form-controls {
+  
+    width:25%;
+    gap:10px;
+    input {
+        padding:10px;
+    }
+   }
+}
