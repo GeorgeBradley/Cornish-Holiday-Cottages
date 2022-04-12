@@ -19,10 +19,14 @@ class PropertyController extends Controller
     {
         
         $property = Property::find($id);
-        
-        
-       
-      
         return view('pages.property')->with('property', $property);
+    }
+
+    public function newProperty(){
+        return view('pages.addnewproperty');
+    }
+
+    public function store(Request $request) {
+        dd($request);
     }
 }

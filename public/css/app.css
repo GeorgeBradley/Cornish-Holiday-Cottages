@@ -3446,15 +3446,60 @@ p {
   justify-content: space-between;
 }
 
-.login-form {
-  width: 100%;
-  background-color: aliceblue;
-  height: 80vh;
+.full-screen-container {
+  background-color: aqua;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.login-form .form-controls {
-  width: 25%;
-  gap: 10px;
+.full-screen-container .login-form-container {
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(0, 20, 31, 0.6);
+  padding: 50px 30px;
+  min-width: 300px;
+  width: 50%;
+  max-width: 600px;
+  font-size: 1.5em;
 }
-.login-form .form-controls input {
+.full-screen-container .login-form-container .form-title {
+  text-align: center;
+}
+.full-screen-container .login-form-container .form-controls {
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.full-screen-container .login-form-container .form-controls label {
+  margin-bottom: 7px;
+}
+.full-screen-container .login-form-container .form-controls input {
+  background-color: none;
   padding: 10px;
+  outline: none;
+  border: none;
+}
+.full-screen-container .login-form-container .login-button {
+  padding: 10px;
+}
+
+.add-new-property-form {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-inline: auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+.add-new-property-form .form-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }

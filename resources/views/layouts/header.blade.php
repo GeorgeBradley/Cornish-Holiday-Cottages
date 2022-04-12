@@ -13,8 +13,8 @@
             </a>
 
             <ul class="nav-items flex hide-for-mobile">
-                <li class=""><a href="index.html" class="nav-item-active">Home</a></li>
-                <li><a href="properties.html" class="">Properties</a></li>
+                <li class=""><a href="#" class="nav-item-active">Home</a></li>
+                <li><a href="/properties" class="">Properties</a></li>
 
                 <li><a href="bookings.html">Bookings</a></li>
                 <li><a href="">Contact</a></li>
@@ -30,7 +30,7 @@
             </a>
         </nav>
         <div class="header-menu-dropdown has-fade">
-            <a href="index.html">Home</a>
+            <a href="#">Home</a>
             <a href="properties.html">Properties</a>
             <a href="">Details</a>
             <a href="bookings.html">Bookings</a>

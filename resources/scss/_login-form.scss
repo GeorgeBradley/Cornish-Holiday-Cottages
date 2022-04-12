@@ -1,15 +1,47 @@
-.login-form {
-    width:100%;
-    background-color: aliceblue;
-    
-    height:calc(100vh - 20vh);
+.full-screen-container {
 
-   .form-controls {
-  
-    width:25%;
-    gap:10px;
-    input {
-        padding:10px;
+    background-color: aqua;
+    height:100vh;
+
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    .login-form-container {
+        border-radius:10px;
+        .form-title {
+            text-align: center;
+        }
+        color:white;
+        background-color: hsla(201, 100%, 6%, 0.6);
+        padding:50px 30px;
+        min-width:300px;
+        width:50%;
+        max-width:600px;
+        font-size:1.5em;
+    
+        .form-controls {
+            margin-bottom:20px;
+            
+            label {
+                margin-bottom:7px;
+            }
+            input {
+                background-color:none;
+                padding:10px;
+                outline:none;
+                border:none;
+            }
+            justify-content: space-between;
+        
     }
-   }
+    .login-button {
+  
+       
+        padding:10px;
+      }
+  }
 }
+
+

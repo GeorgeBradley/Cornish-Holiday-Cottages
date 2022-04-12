@@ -22,8 +22,10 @@ use App\Http\Controllers\PropertyController;
 // });
 
 Route::get('/', [PagesController::class, 'index']);
-
-Route::get('/login', [LoginController::class, 'index']);
-Route::get('/properties', [PropertyController::class, 'show']);
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login',[LoginController::class, 'store']);
+Route::get('/properties', [PropertyController::class, 'show'])->name('properties');
 Route::get('/property/{property}', [PropertyController::class, 'property']);
 
+Route::get('/properties/newproperty', [PropertyController::class, 'newProperty']);
+Route::post('/addproperty', [PropertyController::class, 'store'])->name('addNewProperty');
