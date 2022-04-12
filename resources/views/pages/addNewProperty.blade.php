@@ -2,11 +2,11 @@
 @section('content')
 
 <div class="container m-t-2">
-    <form action="{{ route('addNewProperty') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('addNewProperty') }}" method="POST" enctype="multipart/form-data" id="addNewPropertyForm">
         @csrf
         <h3 class="ta-c">Add new property</h3>
-        <div class="add-new-property-form">
-            <div class="form-control">
+        <div class="add-new-property-form flex flex-fd-c">
+            <div class="form-control flex flex-fd-c">
                 <label for="">Property Name</label>
                 <input type="text" name="property_name" class="@error('property_name') red-border  @enderror" value="{{ old('property_name') }}">
                 @error('property_name')
@@ -15,11 +15,22 @@
                     </div>
                 @enderror
             </div>
-            <div class="form-control">
+
+            <div class="form-control flex flex-fd-c">
                 <label for="">Location</label>
                 <input type="text" name="location_name" class="@error('location_name') red-border  @enderror" value="{{ old('location_name') }}">
 
                 @error('location_name')
+                <div class="p">
+                    {{ $message }}
+                </div>
+            @enderror
+            </div>
+            <div class="form-control flex flex-fd-c">
+                <label for="">About</label>
+                <textarea type="textarea" name="about_info" rows="10" class="@error('about_info') red-border  @enderror" value="{{ old('about_info') }}" ></textarea>
+
+                @error('about_info')
                 <div class="p">
                     {{ $message }}
                 </div>
@@ -57,7 +68,11 @@
             </div>
             <div class="form-control">
                 <label for="">Upload Property Thumbnail</label>
-                <input type="file" name="property_thumbnail_path">
+                <input type="file" name="property_thumbnail_path" onchange="readURL(this) " value="{{ old('property_thumbnail_path') }}">
+             
+            </div>
+            <div class="hidden image-thumbnail-preview">
+                <img id="property-thumbnail-preview" src="" alt="">
             </div>
             <button class="submit">Submit</button>
 

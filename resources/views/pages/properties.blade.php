@@ -43,6 +43,7 @@
         @endforeach
        
     </div>
+
     {{ $properties->links() }}
 </section>
 

@@ -17,7 +17,7 @@ class PropertyController extends Controller
     }
     public function property($id)
     {
-        
+        die("lala");
         $property = Property::find($id);
         return view('pages.property')->with('property', $property);
     }
@@ -36,7 +36,6 @@ class PropertyController extends Controller
             'property_name'=> 'required|max:100',
             'location_name' => 'required|max:100',
             'cost' => 'required|numeric',
-
             'number_of_sleeps' => 'required|integer',
             'number_of_bathrooms' => 'required|integer',
             'number_of_bedrooms' => 'required|integer',
@@ -58,6 +57,7 @@ class PropertyController extends Controller
         ]);
 
         return redirect()->route('properties');
+     
     
     }
 }

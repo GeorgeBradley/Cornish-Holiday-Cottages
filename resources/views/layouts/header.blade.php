@@ -13,8 +13,8 @@
             </a>
 
             <ul class="nav-items flex hide-for-mobile">
-                <li class=""><a href="#" class="nav-item-active">Home</a></li>
-                <li><a href="/properties" class="">Properties</a></li>
+                <li class=""><a href="/" class="{{ (request()->is('/')) ? 'nav-item-active' : ''  }}">Home</a></li>
+                <li><a href="/properties" class="{{ (request()->is('properties')) ? 'nav-item-active' : ''  }}">Properties</a></li>
 
                 <li><a href="bookings.html">Bookings</a></li>
                 <li><a href="">Contact</a></li>

@@ -1,18 +1,45 @@
 .add-new-property-form {
     margin-top:1rem;
     margin-bottom: 1rem;
-    display:flex;
-    flex-direction: column;
-    max-width:max-content;
-    justify-content: center;
+    
+    max-width:500px;
+
 
    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     margin-inline:auto;
+    
     gap:1rem;
     padding:1rem;
     .form-control {
-        display:flex;
-        align-items: center;
+     
+     
+     
         gap:1rem;
+
+       
+       input[type="number"] {
+            max-width: fit-content;
+          }
+
+        
     }
+    .image-thumbnail-preview {
+            
+
+        position: relative;
+        #blah {
+            display:block;
+          width:100%;
+          height:100%;
+          object-fit: cover;
+        }
+    }
+
+    .form-control.row
+    {
+
+    }
+
+
+  
 }
