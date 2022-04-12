@@ -5,7 +5,7 @@
 <section class="properties m-t-3 container m-b-2">
     <div class="flex flex-jc-sb flex-ai-c">
         <h1 class="ta-c m-b-1">Properties</h1>
-        <button class=" ">Add new Property</button>
+        <a href="{{ route('add-new-property-form') }}" class=" ">Add new Property</a>
     </div>
 
     <div class="grid grid-col-1 grid-sm-col-1 grid-md-col-2 grid-lg-col-3 grid-xl-col-4 gap-4">
@@ -19,7 +19,7 @@
                 <a href="">Delete</a>
             </div>
             <div class="property-img-container">
-            <img src="{{ asset($property->image) }}" alt="" class="">
+            <img src="{{asset('images/property-thumbnails/' . $property->image_path) }}" alt="" class="">
             </div>
             <div class="property-info">
 

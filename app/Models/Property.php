@@ -18,10 +18,9 @@ class Property extends Model
 
    protected $fillable = [
 
-    'property_name',
+    'property_title',
     'cost',
     'about_info',
-    
     'allow_pets', 
     'image_path',
     'number_of_sleeps',
@@ -29,7 +28,6 @@ class Property extends Model
     'number_of_bathrooms',
     'location', 
    
-
    ];
 
    protected $hidden = [
