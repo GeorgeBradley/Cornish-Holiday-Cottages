@@ -18,6 +18,7 @@ class Property extends Model
 
    protected $fillable = [
 
+
     'property_title',
     'cost',
     'about_info',
@@ -40,9 +41,9 @@ class Property extends Model
 
    public function propertyImages(){
 
-    return $this->hasMany(PropertyImages::class) //Foreign key on CarModel table
+    return $this->hasMany(PropertyImages::class ) ; //Foreign key on CarModel table
        
-     ; //Foreign key on engine table
+     //Foreign key on engine table
     }
    
 //    public function productionDate(){

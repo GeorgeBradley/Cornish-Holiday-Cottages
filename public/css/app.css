@@ -3511,6 +3511,17 @@ p {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.add-new-property-form .property-gallery-images {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .red-border {
   border: 1px solid red;
+}
+
+.error-message-container .error-message {
+  color: red;
 }

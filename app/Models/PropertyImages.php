@@ -19,14 +19,14 @@ class PropertyImages extends Model
 
    public function property()
    {
-       return $this->belongsTo(Properties::class);
+       return $this->belongsTo(Properties::class, 'property_id');
    }
    protected $hidden = [
      
    ];
    protected $fillable = [
 
-        
+        'property_id',
         'image_path'
 
    ];
