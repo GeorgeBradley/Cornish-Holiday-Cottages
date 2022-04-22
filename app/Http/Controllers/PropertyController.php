@@ -23,7 +23,7 @@ class PropertyController extends Controller
     }
 
     public function newProperty(){
-        return view('pages.addnewproperty');
+        return view('pages.addNewProperty');
     }
 
     public function store(Request $request) {
