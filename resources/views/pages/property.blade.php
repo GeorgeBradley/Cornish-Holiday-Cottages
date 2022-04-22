@@ -2,7 +2,7 @@
 @section('content')
 <nav class="property-details-nav">
 
-    <ul class="nav-items flex flex-jc-se bs-1 p-2">
+    <ul class="nav-items flex flex-jc-se bs-1 p-1 flex-ai-c">
 
         <li><a href="/properties.html" class="btn">Back</a></li>
         <li><a href="#overview" class="property-details-nav-item">Overview</a></li>
@@ -21,20 +21,8 @@
 
     <div class="container bs-1 p-1">
 
- 
-            <p>Offering everything you could ask for in a holiday, Newquay is packed with activities, facilities and
-                attractions to keep you busy during a break away. A selection of pubs, shops, clubs, and a cinema await,
-                alongside renowned attractions such as Newquay Zoo and Blue Reef Aquarium, and beautiful beaches like
-                Fistral, Crantock and Towan. Enjoy a stroll along the South West Coast Path, explore the Gannel Estuary,
-                or venture out in the car slightly further afield to explore the likes of Watergate Bay, Padstow, the
-                Lost Gardens of Heligan, and the Eden Project. Enter the communal entrance and into a bright, airy lobby
-                area. Make your way up the stairs to the top floor where you will find the entrance to the apartment.
-
-            </p> 
-    
-
-           <p> Two private balconies and terrace areas, one accessed from the living room and the other from the
-            bedroom, both via patio doors and complete with furniture. Private permit parking for one car.</p>
+        {{ $property->about_info }}
+           
 
 
     </div>
@@ -49,11 +37,44 @@
 <div class="gallery">
     @foreach ($property->propertyImages as $image)
     <div class="gallery-item">
-        <img class="gallery-image" src="{{ asset($image->image_path) }}" alt="">
+        <img class="gallery-image" src="{{asset('images/property-gallery-images/' . $image->image_path) }}" alt="">
     </div>
     @endforeach
 </div>
     </div>
 </section>
 
+<section>
+    
+<section class="testimonials m-t-3 m-b-3 container">
+
+    <div class="">
+        <h1 class="section-title ta-c">Testimonials</h1>
+        <button>Add New Testimonial</button>
+    </div>
+      
+        <div class="testimonial-cards grid gap-5 grid-col-1 grid-sm-col-2 grid-md-col-2 grid-lg-col-3">
+            <div class="testimonial-card flex flex-jc-c flex-ai-c flex-fd-c p-1 bs-1 gap-1">
+               
+               
+                <div class="img-container">
+                    <img src="images/testimonials/pexels-photo-762020.jpeg" alt="" class="profile-pic bs-2">
+                </div>
+                <h1 class="name">Sarah Clark</h1>
+           
+        
+    
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+            </div>
+            
+            <blockquote class="ta-c">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia incidunt corrupti ducimus
+                consequatur saepe fuga suscipit, voluptatibus debitis rerum vel.</blockquote>
+        </div>
+    
+</section>
 @endsection

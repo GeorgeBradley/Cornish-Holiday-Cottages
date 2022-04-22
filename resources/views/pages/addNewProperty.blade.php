@@ -74,7 +74,7 @@
             </div>
             <div class="form-control">
                 <label for="">Upload Property Thumbnail</label>
-                <input type="file" name="property_thumbnail_path" onchange="readURL(this) " value="{{ old('property_thumbnail_path') }}">
+                <input type="file" name="property_thumbnail_path" onchange="readURL(this) ">
                 @error('property_thumbnail_path')
                 <div class="error-message-container">
                     <p class="error-message">{{ $message }}</p>
@@ -87,10 +87,10 @@
 
             <div class="form-control">
                 <label for="">Upload Gallery images</label>
-                <input id="files" type="file" name="images" multiple>
+                <input type="file" name="images[]" multiple>
                 <div id='result' class="property-gallery-images">
                 </div>
-                @error('property_gallery_images')
+                @error('images')
                 <div class="error-message-container">
                     <p class="error-message">{{ $message }}</p>
                 </div>

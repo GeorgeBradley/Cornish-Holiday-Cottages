@@ -13,6 +13,9 @@ html {
   font-family: "Oxygen", sans-serif;
 }
 
+body {
+  min-height: 100vh;
+}
 body.no-scroll {
   overflow: hidden;
 }
@@ -2678,6 +2681,10 @@ img {
   flex-basis: 40%;
 }
 
+.l-s-t-n {
+  list-style-type: none;
+}
+
 .hero {
   overflow: hidden;
 }
@@ -3039,6 +3046,18 @@ footer .sm-links i {
           animation: fade-out 300ms ease-in-out forwards;
 }
 
+.add-new-property-btn {
+  padding: 0.5rem 0.7rem;
+  border-radius: 0.2rem;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  transition: background-color 200ms ease-in-out;
+}
+
+.add-new-property-btn:hover {
+  background-color: #cccccc;
+}
+
 .property {
   display: flex;
   flex-wrap: wrap;
@@ -3073,6 +3092,7 @@ footer .sm-links i {
   border-radius: 2px;
   font-size: 1.2em;
   font-weight: bold;
+  transition: background-color 200ms ease-in-out;
 }
 .property .price-box .btn:hover {
   background-color: #9459cc;
@@ -3328,6 +3348,38 @@ p {
     max-width: 1320px;
   }
 }
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  padding: 0.4rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  font-size: 0.5rem;
+  border-radius: 6px;
+  top: 2rem;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 .sign-up input {
   border: none;
   width: 100%;

@@ -6,7 +6,7 @@ use App\Models\Property;
 use Illuminate\Http\Request;
 use App\Models\PropertyImages;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Storage;
 class PropertyController extends Controller
 {
     public function show()
@@ -29,7 +29,6 @@ class PropertyController extends Controller
     public function store(Request $request) {
 
 
-
         
         $this->validate($request, [
 
@@ -41,11 +40,11 @@ class PropertyController extends Controller
             'number_of_bathrooms' => 'required|integer',
             'number_of_bedrooms' => 'required|integer',
             'property_thumbnail_path' => 'required:mimes:jpg, png, jpeg|max:5048',
-            'images' => 'required'
+             'images' => 'required'
         ]
         );
 
-    
+        
         $newImageName = time() . '-' . $request->property_name . '.' . $request->property_thumbnail_path->extension();
         $request->property_thumbnail_path->move(public_path('images/property-thumbnails'), $newImageName);
 
@@ -62,20 +61,35 @@ class PropertyController extends Controller
         ]);
 
         $productID = $prop->id;
-      
-
-        foreach ($request->file('images') as $imagefile) {
-            $image = new PropertyImages;
+        $la = [];
+        $files = $request->file('images');
+        if($request->hasFile('images'))
+        {
             
-   
-            $path = $imagefile->store('images/property-gallery-images', ['disk' => 'my_files']);
-            dd($path);
-            $image->image_path = $path;
-            $image->property_id = $productID;
-        }   
-        
-       
+        $allowedfileExtension=['pdf','jpg','png','docx'];
+        $files = $request->file('images');
+        foreach($files as $file)
+        {
 
+        $image = new PropertyImages;
+        $filename = $file->getClientOriginalName();
+        $extension = $file->getClientOriginalExtension();
+        $check=in_array($extension,$allowedfileExtension);
+
+        $newGalleryImage = time() . '-' . $request->property_name . '.' . $filename;
+        $file->move(public_path('images/property-gallery-images'), $newGalleryImage);
+        
+        $image->image_path = $newGalleryImage;
+        $image->property_id = $productID;
+        $image->save();
+        }
+    
+    }
+
+       
+  
+
+      
           
         
         

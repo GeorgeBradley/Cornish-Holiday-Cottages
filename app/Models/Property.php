@@ -41,7 +41,7 @@ class Property extends Model
 
    public function propertyImages(){
 
-    return $this->hasMany(PropertyImages::class ) ; //Foreign key on CarModel table
+    return $this->hasMany(PropertyImages::class); //Foreign key on CarModel table
        
      //Foreign key on engine table
     }
