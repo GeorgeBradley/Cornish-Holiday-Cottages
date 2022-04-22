@@ -27,3 +27,19 @@
 
     
 }
+
+.overview {
+    .about {
+        display:flex;
+        flex-wrap: wrap;
+      
+    }
+    .about > * {
+        flex-basis: 50%;
+    }
+}
+
+.property-thumbnail-image {
+    width:500px;
+    height:max-content;
+}

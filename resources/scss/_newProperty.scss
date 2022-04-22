@@ -16,11 +16,20 @@
      
         gap:1rem;
 
+        
        
        input[type="number"] {
             max-width: fit-content;
+            border:1px solid #ccc;
           }
-
+        
+          input[type="checkbox"] {
+           
+          }
+        input[type="text"] {
+            padding:0.9rem .5rem;
+            border:1px solid #ccc;
+        }
         
     }
     .image-thumbnail-preview {

@@ -1,32 +1,41 @@
 @extends('layouts.app')
 @section('content')
-<nav class="property-details-nav">
+<nav class="property-details-nav bs-1">
 
-    <ul class="nav-items flex flex-jc-se bs-1 p-1 flex-ai-c">
+    <div class="container">
+        <ul class="nav-items flex flex-jc-se  p-1 flex-ai-c">
 
-        <li><a href="/properties.html" class="btn">Back</a></li>
-        <li><a href="#overview" class="property-details-nav-item">Overview</a></li>
-        <li><a href="#testimonials" class="property-details-nav-item">Reviews</a></li>
-        <li><a href="#images" class="property-details-nav-item">Photos</a></li>
-        <li><a href=""class="property-details-nav-item">Location</a></li>
-
-
-    </ul>
-
+            <li><a href="/properties.html" class="btn">Back</a></li>
+            <li><a href="#overview" class="property-details-nav-item">Overview</a></li>
+            <li><a href="#testimonials" class="property-details-nav-item">Reviews</a></li>
+            <li><a href="#images" class="property-details-nav-item">Photos</a></li>
+            <li><a href=""class="property-details-nav-item">Location</a></li>
+    
+    
+        </ul>
+    
+    </div>
+   
 
 </nav>
 
 <section class="overview m-t-3 m-b-3" id="overview">
-    <h1 class="ta-c m-b-2">{{ $property->property_title }}</h1>
-
-    <div class="container bs-1 p-1">
-
-        {{ $property->about_info }}
-           
-
+    <div class="container">
+        <h1 class="ta-c m-b-2">{{ $property->property_title }}</h1>
+        <div class="content grid grid-col-1 grid-lg-col-2 gap-2">
+    
+            <div class="bs-1 p-1">
+                <h2 class="m-b-1">Description</h2>
+                {{ $property->about_info }}
+            </div>
+        
+            <div class="">
+                <img src="{{ asset('images/property-thumbnails/' . $property->image_path) }}" class="property-thumbnail-image" alt="">
+            </div>
+        </div>
 
     </div>
-
+   
 </section>
 
 

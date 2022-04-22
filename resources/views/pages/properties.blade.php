@@ -14,16 +14,16 @@
 
         
         <div class="property flex-js-c flex-as-c gap-3 bs-1 p-1">
-            <div class="edit flex gap-1 flex-jc-c">
-                <a href="">Edit</a>
-                <a href="">Delete</a>
+            <div class="edit flex gap-1 flex-jc-e w-100">
+                <a href="" class="tooltip"><span class="tooltiptext">Edit</span><span class="fa-solid fa-pen-to-square success-color"></span></a>
+                <a href="" class="tooltip"><span class="tooltiptext">Delete</span><span class="fa-solid fa-trash danger-color"></span></a>
             </div>
             <div class="property-img-container">
             <img src="{{asset('images/property-thumbnails/' . $property->image_path) }}" alt="" class="">
             </div>
             <div class="property-info">
 
-                <h2>{{ $property->property_name }}</h2>
+                <h2>{{ $property->property_title }}</h2>
                 <p>{{ $property->location }}</strong></p>
                 <ul class="flex gap-1">
                     <li class="flex gap-1 tooltip"><span class="tooltiptext">Number of Sleeps</span><span class="fa-solid fa-bed"></span>{{ $property->number_of_sleeps }}</li>

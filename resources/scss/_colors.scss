@@ -1,0 +1,14 @@
+:root {
+
+    --danger-color:#d9534f;
+    --success-color:#5cb85c;
+    
+}
+
+.danger-color {
+    color:var(--danger-color);
+}
+
+.success-color {
+    color:var(--success-color);
+}

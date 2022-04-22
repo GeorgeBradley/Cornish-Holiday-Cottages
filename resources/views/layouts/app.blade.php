@@ -34,9 +34,7 @@
     @include('layouts.footer')
     
     <script src="{{ asset('js/app.js') }}"> </script>
-    <div class="image-thumbnail-preview">
-        <img id="property-thumbnail-preview" src="" alt="">
-    </div>
+
     <script>
 function readURL(input) {
   if (input.files && input.files[0]) {

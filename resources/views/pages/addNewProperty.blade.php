@@ -2,6 +2,7 @@
 @section('content')
 
 <div class="container m-t-2">
+    <a href="" class="btn">Back</a>
     <form action="{{ route('addNewProperty') }}" method="POST" enctype="multipart/form-data" id="addNewPropertyForm">
         @csrf
         <h3 class="ta-c">Add new property</h3>
@@ -36,7 +37,7 @@
                 </div>
             @enderror
             </div>
-            <div class="form-control">
+            <div class="form-control flex flex-fd-c">
                 <label for="">Cost per night: £</label>
                 <input type="text" name="cost" class="@error('cost') red-border  @enderror" value="{{ old('cost') }}">
                 @error('cost')
@@ -87,7 +88,7 @@
 
             <div class="form-control">
                 <label for="">Upload Gallery images</label>
-                <input type="file" name="images[]" multiple>
+                <input type="file" id="files" name="images[]" multiple>
                 <div id='result' class="property-gallery-images">
                 </div>
                 @error('images')
