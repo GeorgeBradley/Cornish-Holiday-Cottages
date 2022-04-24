@@ -23,7 +23,7 @@
             @auth
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
-                <button type="submit" class="btn btn-logout m-l-1">Logout</button>
+                <button type="submit" class="btn btn-logout m-l-1 hide-for-mobile">Logout</button>
 
 
             </form>
@@ -45,7 +45,16 @@
             <a href="">Details</a>
             <a href="bookings.html">Bookings</a>
             <a href="">Contact</a>
+            @auth
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-logout invert m-l-1">Logout</button>
 
+
+            </form>
+           
+
+            @endauth
         </div>
 
     </div>
