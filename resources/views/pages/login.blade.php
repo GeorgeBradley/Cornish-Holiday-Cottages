@@ -5,9 +5,7 @@
   
 
 
-    @if (session('status'))
-    {{  session('status')  }}
-    @endif
+   
     <div class="login-form-container">
         <h3 class="form-title">Admin Login</h3>
     <form action="{{ route('login') }}" class="" method="POST">
@@ -21,6 +19,15 @@
             <div class="icon-container">
                 <i class="fa-solid fa-user"></i>
             </div>
+            @if (session('status'))
+            <div class="error-message-container ta-c">
+                <p class="error-message">
+                    {{  session('status')  }}
+                </p>
+               
+            </div>
+           
+            @endif
             <div class="form-controls flex flex-fd-c">
                 <label for="">Email</label>
                 <input type="text" class="" name="email" placeholder="">

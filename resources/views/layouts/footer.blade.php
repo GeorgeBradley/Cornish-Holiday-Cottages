@@ -45,3 +45,6 @@
             <p class="ta-c p-t-1">George Austin Bradley &copy; 2021</p>
         </div>
     </footer>
+
+
+</div>
