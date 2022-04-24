@@ -88,9 +88,6 @@ img {
 .header .logo-container img {
   width: 40px;
 }
-.header .btn {
-  margin-right: auto;
-}
 @media (max-width: 62em) {
   .header {
     padding-top: 20px;

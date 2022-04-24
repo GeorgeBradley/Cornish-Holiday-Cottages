@@ -5,7 +5,10 @@
 <section class="properties m-t-3 container m-b-2">
     <div class="flex flex-jc-sb flex-ai-c">
         <h1 class="ta-c m-b-1">Properties</h1>
+        @auth
         <a href="{{ route('add-new-property-form') }}" class="add-new-property-btn flex flex-jc-c flex-ai-c gap-1"><span class="fa-solid fa-plus"></span>Add new Property</a>
+
+        @endauth
     </div>
 
     <div class="grid grid-col-1 grid-sm-col-1 grid-md-col-2 grid-lg-col-3 grid-xl-col-4 gap-4">

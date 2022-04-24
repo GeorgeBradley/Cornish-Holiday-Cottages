@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\PropertyController;
 
 /*
@@ -29,3 +30,6 @@ Route::get('/property/{property}', [PropertyController::class, 'property'])->nam
 
 Route::get('/properties/newproperty', [PropertyController::class, 'newProperty'])->name('add-new-property-form');
 Route::post('/addproperty', [PropertyController::class, 'store'])->name('addNewProperty');
+
+
+Route::post('/logout', [LogoutController::class, 'perform'])->name('logout');

@@ -18,8 +18,17 @@
 
                 <li><a href="bookings.html">Bookings</a></li>
                 <li><a href="">Contact</a></li>
-
             </ul>
+            @auth
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-logout m-l-1">Logout</button>
+
+
+            </form>
+           
+
+            @endauth
 
 
 
