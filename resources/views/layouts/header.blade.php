@@ -40,7 +40,7 @@
             </a>
         </nav>
         <div class="header-menu-dropdown has-fade">
-            <a href="{{ route('index') }}">Home</a>
+            <a href="{{ route('landing-page') }}">Home</a>
             <a href="{{ route('properties') }}">Properties</a>
             <a href="#">Details</a>
             <a href="#">Bookings</a>

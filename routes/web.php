@@ -22,7 +22,7 @@ use App\Http\Controllers\PropertyController;
 //     return view('index');
 // });
 
-Route::get('/', [PagesController::class, 'index']);
+Route::get('/', [PagesController::class, 'index'])->name('landing-page');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login',[LoginController::class, 'store']);
 Route::get('/properties', [PropertyController::class, 'show'])->name('properties');
