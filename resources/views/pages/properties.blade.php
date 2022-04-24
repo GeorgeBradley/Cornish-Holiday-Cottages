@@ -17,10 +17,14 @@
 
         
         <div class="property flex-js-c flex-as-c gap-3 bs-1 p-1">
+           
+            @auth
             <div class="edit flex gap-1 flex-jc-e w-100">
                 <a href="" class="tooltip"><span class="tooltiptext">Edit</span><span class="fa-solid fa-pen-to-square success-color"></span></a>
                 <a href="" class="tooltip"><span class="tooltiptext">Delete</span><span class="fa-solid fa-trash danger-color"></span></a>
             </div>
+            @endauth
+            
             <div class="property-img-container">
             <img src="{{asset('images/property-thumbnails/' . $property->image_path) }}" alt="" class="">
             </div>
