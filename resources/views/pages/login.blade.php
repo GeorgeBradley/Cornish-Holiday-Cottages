@@ -30,7 +30,7 @@
             @endif
             <div class="form-controls flex flex-fd-c">
                 <label for="">Email</label>
-                <input type="text" class="" name="email" placeholder="">
+                <input type="text" value="{{ old('email') }}"  name="email" class="@error('email') red-border  @enderror" placeholder="">
     
                 @error('email')
                
@@ -47,7 +47,7 @@
             </div>
             <div class="form-controls flex flex-fd-c">
                 <label for="">Password</label>
-                <input type="password" name="password" placeholder="">
+                <input type="password" name="password" placeholder="" class="@error('password') red-border  @enderror">
                 @error('password')
                
                 <div class="error-message-container">

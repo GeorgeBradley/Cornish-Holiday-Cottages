@@ -1,5 +1,5 @@
 
-<header class="header">
+<header class="header" id="primary-header">
     <div class="overlay has-fade"></div>
     <div class="container-fluid">
         <nav class="header-nav flex flex-jc-sb flex-ai-c">

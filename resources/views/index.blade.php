@@ -334,7 +334,7 @@ consequatur saepe fuga suscipit, voluptatibus debitis rerum vel.</blockquote>
 </section>
 
 <section class="back-to-top bg-light p-1 flex flex-jc-c flex-ai-c">
-    <a href="" class="">
+    <a href="#primary-header">
         Back to top <i class="fas fa-chevron-up m-l-1"></i>
     </a>
 </section>
