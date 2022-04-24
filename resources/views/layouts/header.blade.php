@@ -40,11 +40,11 @@
             </a>
         </nav>
         <div class="header-menu-dropdown has-fade">
-            <a href="#">Home</a>
-            <a href="properties.html">Properties</a>
-            <a href="">Details</a>
-            <a href="bookings.html">Bookings</a>
-            <a href="">Contact</a>
+            <a href="{{ route('index') }}">Home</a>
+            <a href="{{ route('properties') }}">Properties</a>
+            <a href="#">Details</a>
+            <a href="#">Bookings</a>
+            <a href="#">Contact</a>
             @auth
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
