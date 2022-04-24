@@ -36,11 +36,9 @@
                     <img src="{{ asset('images/cottages/cottage4.jpeg') }}" alt="">
                 </li>
                 <li class="carousel-item">
-                    <img src="/images/dock.jpeg" alt="">
+                    <img src="{{ asset('images/cottages/cottage4.jpeg') }}" alt="">
                 </li>
-                <li class="carousel-item">
-                    <img src="/images/pexels-pixabay-53435.jpg" alt="">
-                </li>
+  
             </ul>
             <div class="carousel-prev">
                 <label for="carousel-1"></label>
@@ -103,23 +101,23 @@
     <div class="flex flex-fw-w gap-2  ">
         <div class="hero-img-item flex flex-jc-c flex-ai-c">
             <h1 class="hero-img-caption">A fresh breeze</h1>
-            <img src="/images/beach.jpeg" alt="" class="img-overlay">
+            <img src="{{asset('images/cottages/beach.jpeg')}}" alt="" class="img-overlay">
         </div>
         <div class="hero-img-item flex flex-jc-c flex-ai-c">
             <h1 class="hero-img-caption">Story time</h1>
-            <img src="/images/cottage-night-time.jpeg" alt="" class="img-overlay">
+            <img src="{{asset('images/cottages/cottage-night-time.jpeg')  }}" alt="" class="img-overlay">
         </div>
         <div class="hero-img-item flex flex-jc-c flex-ai-c">
             <h1 class="hero-img-caption">Sail away</h1>
-            <img src="/images/dock.jpeg" alt="" class="img-overlay">
+            <img src="{{ asset('images/cottages/dock.jpeg') }}" alt="" class="img-overlay">
         </div>
         <div class="hero-img-item flex flex-jc-c flex-ai-c">
             <h1 class="hero-img-caption">Enchanting sunsets</h1>
-            <img src="/images/pexels-photo-4687530.jpeg" alt="" class="img-overlay">
+            <img src="{{ asset('images/cottages/pexels-photo-4687530.jpeg') }}" alt="" class="img-overlay">
         </div>
         <div class="hero-img-item flex flex-jc-c flex-ai-c">
             <h1 class="hero-img-caption">Cottages</h1>
-            <img src="/images/cottage6.jpeg" alt="" class="img-overlay">
+            <img src="{{ asset('images/cottages/cottage6.jpeg') }}" alt="" class="img-overlay">
         </div>
     </div>
 </section>
@@ -179,7 +177,7 @@
 
         </div>
         <div class="about-image">
-            <img src="images/cottage2.jpeg" alt="">
+            <img src="{{ asset('images/cottages/cottage2.jpeg') }}" alt="">
         </div>
 
     </div>
