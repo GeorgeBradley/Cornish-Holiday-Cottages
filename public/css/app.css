@@ -3524,22 +3524,53 @@ p {
 }
 
 .full-screen-container {
-  background-color: aqua;
-  height: 100vh;
+  background-color: #00365a;
+  min-height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.full-screen-container .icon-container {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.full-screen-container .icon-container > i {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 40%;
+  background-color: #ededed;
+}
+.full-screen-container .form-title {
+  background-color: #0091d0;
+  padding: 1rem 0px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  color: #ffff;
+  width: 100%;
+}
+.full-screen-container form {
+  height: 100%;
+}
 .full-screen-container .login-form-container {
-  border-radius: 10px;
-  color: white;
-  background-color: rgba(0, 20, 31, 0.6);
-  padding: 50px 30px;
-  min-width: 300px;
-  width: 50%;
   max-width: 600px;
+  width: 100%;
+  height: 100%;
+  margin: 1rem;
+  background-color: #ffff;
+  color: #b7b7b7;
+  background-color: #ffff;
   font-size: 1.5em;
+}
+.full-screen-container .login-form-container .form-body {
+  border-radius: 10px;
+  height: 100%;
+  width: 95%;
+  margin-inline: auto;
+  padding: 2rem;
 }
 .full-screen-container .login-form-container .form-title {
   text-align: center;
@@ -3553,12 +3584,21 @@ p {
 }
 .full-screen-container .login-form-container .form-controls input {
   background-color: none;
-  padding: 10px;
+  padding: 1rem;
   outline: none;
-  border: none;
+  border: 2px solid #ccc;
+}
+.full-screen-container .login-form-container .form-controls input:focus {
+  border: 2px solid #00365a;
 }
 .full-screen-container .login-form-container .login-button {
-  padding: 10px;
+  background-color: #00365a;
+  color: #ffff;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 1rem;
+  font-size: large;
+  border: none;
 }
 
 .add-new-property-form {

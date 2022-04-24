@@ -36,7 +36,7 @@
                     <img src="{{ asset('images/cottages/cottage4.jpeg') }}" alt="">
                 </li>
                 <li class="carousel-item">
-                    <img src="{{ asset('images/cottages/cottage4.jpeg') }}" alt="">
+                    <img src="{{ asset('images/cottages/dock.jpeg') }}" alt="">
                 </li>
   
             </ul>

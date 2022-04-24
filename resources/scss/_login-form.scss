@@ -1,24 +1,70 @@
 .full-screen-container {
 
-    background-color: aqua;
-    height:100vh;
+    .icon-container {
+    
+        margin-bottom:1rem;
+       
+        display:flex;
+        justify-content: center;
+        align-items: center;
+      
+      
+    }
+    .icon-container > i {
+        border:1px solid #ccc;
+        padding:1rem;
+        border-radius: 40%;
+        background-color: #ededed;
+    }
+    background-color: #00365a;
+    min-height: 100vh;
 
     overflow: hidden;
     display:flex;
     justify-content: center;
     align-items: center;
-
+    
+    .form-title {
+        background-color: #0091d0;
+        padding:1rem 0px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: .1rem;
+        color:#ffff;
+       width:100%;
+      
+      
+    }
+    form {
+        height:100%;
+    }
     .login-form-container {
-        border-radius:10px;
+
+        max-width:600px;
+        width:100%;
+        height:100%;
+        margin:1rem;
+
+     
+        background-color: #ffff;
+        .form-body {
+            border-radius:10px;
+            height:100%;
+            width:95%;
+            margin-inline:auto;
+             padding: 2rem;
+        }
+       
+  
         .form-title {
             text-align: center;
         }
-        color:white;
-        background-color: hsla(201, 100%, 6%, 0.6);
-        padding:50px 30px;
-        min-width:300px;
-        width:50%;
-        max-width:600px;
+        color:#b7b7b7;
+        background-color: #ffff;
+     
+  
+   
+     
         font-size:1.5em;
     
         .form-controls {
@@ -29,17 +75,25 @@
             }
             input {
                 background-color:none;
-                padding:10px;
+                padding:1rem;
                 outline:none;
-                border:none;
+                border:2px solid #ccc;
+            }
+            input:focus {
+                border:2px solid #00365a;
             }
             justify-content: space-between;
         
     }
     .login-button {
   
-       
-        padding:10px;
+        background-color: #00365a;
+        color:#ffff;
+        width:100%;
+        text-transform: uppercase;
+        padding:1rem;
+        font-size: large;
+        border:none;
       }
   }
 }
