@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\LoginController;
@@ -33,3 +35,8 @@ Route::post('/addproperty', [PropertyController::class, 'store'])->name('addNewP
 
 
 Route::post('/logout', [LogoutController::class, 'perform'])->name('logout');
+
+Route::get('/email', function(){
+    Mail::to('info@darynazar.com')->send(new ContactMail);
+    return new ContactMail();
+});
