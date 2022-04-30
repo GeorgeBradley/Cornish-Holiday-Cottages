@@ -9,12 +9,7 @@
     <div class="login-form-container">
         <h3 class="form-title">Admin Login</h3>
     <form action="{{ route('login') }}" class="" method="POST">
-
         @csrf
-        
-     
-     
-   
         <div class="form-body">
             <div class="icon-container">
                 <i class="fa-solid fa-user"></i>
@@ -44,6 +39,7 @@
              
             
                 @enderror
+                
             </div>
             <div class="form-controls flex flex-fd-c">
                 <label for="">Password</label>
