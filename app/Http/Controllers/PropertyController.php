@@ -14,12 +14,18 @@ class PropertyController extends Controller
     
         //$properties = Properties::all()->pagina;
         $properties= Property::paginate(10);
-        return view('pages.properties')->with('properties', $properties);
+        return view('pages.properties', [
+            'properties' => $properties
+        ]);
     }
     public function property($id)
     {
+        $recommendedProperties = Property::limit(3)->where('id', '!=', $id)->get();
         $property = Property::find($id);
-        return view('pages.property')->with('property', $property);
+        return view('pages.property', [
+            'property' => $property,
+            'recommendedProperties' => $recommendedProperties
+        ]);
     }
 
     public function newProperty(){
