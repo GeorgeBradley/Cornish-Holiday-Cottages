@@ -423,6 +423,9 @@ img {
     flex-direction: column;
   }
 }
+.flex-fg-1 {
+  flex-grow: 1;
+}
 .flex-fd-r {
   flex-direction: row;
 }
@@ -3261,13 +3264,36 @@ Remove or comment-out the code block below to see how the browser will fall-back
     margin: 0;
   }
 }
-.contact {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  padding: 40px;
-  flex: 1;
+.contact-form {
+  gap: 1rem;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-form input:focus {
+  outline: 1px solid #0088ff;
+  border: 1px solid #fff;
+}
+
+.contact-form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 1rem;
+  background-color: #9459cc;
+  color: #ffff;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .logo-text {
@@ -3285,6 +3311,10 @@ h1 {
 
 p {
   font-size: 1.2rem;
+}
+
+.social {
+  width: 500px;
 }
 
 .about .content {

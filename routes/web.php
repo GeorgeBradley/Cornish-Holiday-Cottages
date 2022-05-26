@@ -7,6 +7,8 @@ use App\Http\Controllers\CarsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\BookingsController;
 use App\Http\Controllers\PropertyController;
 
 /*
@@ -28,6 +30,9 @@ Route::get('/', [PagesController::class, 'index'])->name('landing-page');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login',[LoginController::class, 'store']);
 Route::get('/properties', [PropertyController::class, 'show'])->name('properties');
+Route::get('/bookings', [BookingsController::class, 'index'])->name('bookings');
+
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/property/{property}', [PropertyController::class, 'property'])->name('property');
 
 Route::get('/properties/newproperty', [PropertyController::class, 'newProperty'])->name('add-new-property-form')->middleware('auth');

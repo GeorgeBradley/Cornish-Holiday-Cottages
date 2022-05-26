@@ -695,6 +695,9 @@
             }
         }
     }
+    &-fg-1 {
+      flex-grow:1;
+    }
     &-fd-r {
         flex-direction: row;
     }
