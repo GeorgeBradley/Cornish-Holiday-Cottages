@@ -201,7 +201,7 @@
            
            
             <div class="img-container">
-                <img src="images/testimonials/pexels-photo-762020.jpeg" alt="" class="profile-pic bs-2">
+                <img src=" {{ asset('images/testimonials/pexels-photo-762020.jpeg') }}" alt="" class="profile-pic bs-2">
             </div>
             <h1 class="name">Sarah Clark</h1>
        
@@ -223,7 +223,7 @@
            
            
         <div class="img-container">
-            <img src="images/testimonials/man1.jpeg" alt="" class="profile-pic bs-2">
+            <img src=" {{ asset('images/testimonials/man1.jpeg') }}" alt="" class="profile-pic bs-2">
         </div>
         <h1 class="name">John Smith</h1>
    
@@ -267,7 +267,7 @@
            
            
 <div class="img-container">
-    <img src="images/testimonials/woman1.jpeg" alt="" class="profile-pic bs-2">
+    <img src="{{ asset('images/testimonials/woman1.jpeg') }}" alt="" class="profile-pic bs-2">
 </div>
 <h1 class="name">Sue Keown</h1>
 
@@ -289,7 +289,7 @@ consequatur saepe fuga suscipit, voluptatibus debitis rerum vel.</blockquote>
            
            
 <div class="img-container">
-    <img src="images/testimonials/pexels-photo-532220.jpeg" alt="" class="profile-pic bs-2">
+    <img src=" {{ asset('images/testimonials/pexels-photo-532220.jpeg') }}" alt="" class="profile-pic bs-2">
 </div>
 <h1 class="name">Beth Adams</h1>
 
@@ -311,7 +311,7 @@ consequatur saepe fuga suscipit, voluptatibus debitis rerum vel.</blockquote>
            
            
 <div class="img-container">
-    <img src="images/testimonials/man2.jpeg" alt="" class="profile-pic bs-2">
+    <img src=" {{ asset('images/testimonials/man2.jpeg') }}" alt="" class="profile-pic bs-2">
 </div>
 <h1 class="name">Andy Pierce</h1>
 
