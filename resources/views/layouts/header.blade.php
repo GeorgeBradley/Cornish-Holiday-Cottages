@@ -17,7 +17,6 @@
                 <li class=""><a href="/" class="{{ (request()->is('/')) ? 'nav-item-active' : ''  }}">Home</a></li>
                 <li><a href="/properties" class="{{ (request()->is('properties')) ? 'nav-item-active' : ''  }}">Properties</a></li>
 
-                <li><a href="/bookings" class="{{ (request()->is('bookings')) ? 'nav-item-active' : ''  }}">Bookings</a></li>
                 <li><a href="/contact" class="{{ (request()->is('contact')) ? 'nav-item-active' : ''  }}">Contact</a></li>
             </ul>
             @auth

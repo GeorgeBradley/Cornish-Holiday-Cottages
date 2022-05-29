@@ -38,7 +38,54 @@
    
 </section>
 
+<section class="m-t-3 container m-b-2">
 
+    <h2>Booking Enquiry</h2>
+    <div class="social flex flex-jc-c flex-fw-w w-100">
+     
+        <form action="" class="contact-form flex flex-jc-c flex-fd-c flex-fs-1 mw-100">
+        
+            <div class="flex flex-fw-w gap-1">
+                <div class="flex flex-fd-c flex-fg-1 gap-1">
+                    <label for="">First Name</label>
+                    <input type="text" class="p-1">
+                </div>
+                <div class="flex flex-fd-c flex-fg-1 gap-1">
+                    <label for="">Last Name</label>
+                    <input type="text" class="p-1">
+                </div>
+            </div>
+        
+        
+        <div class="flex flex-fd-c gap-1">
+            <label for="">Your Email</label>
+            <input type="email" class="p-1">
+        </div>
+        
+        <div class="flex flex-fd-c gap-1">
+            <label for="">Interested in the property:</label>
+            <input type="text" value="{{$property->property_title   }}" class="p-1" readonly>
+        
+        </div>
+        <div class="flex flex-fd-c gap-1">
+            <label for="">Enquiry Message</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        
+        <div class="flex flex-fd-c gap-1">
+            <button class="submit">Send</button>
+        </div>
+        
+        
+        </form>    
+    </div>
+    
+    
+    
+    
+    
+    
+    </section>
 <section class="property-images m-t-3 m-b-3" id="images">
     <h1 class="ta-c m-b-2">Photos</h1>
     <div class="container">
@@ -59,7 +106,7 @@
 
     <div class="">
         <h1 class="section-title ta-c">Testimonials</h1>
-        <button>Add New Testimonial</button>
+        <button class="add-new-property-btn flex flex-jc-c flex-ai-c gap-1">Add New Testimonial</button>
     </div>
       
         <div class="testimonial-cards grid gap-5 grid-col-1 grid-sm-col-2 grid-md-col-2 grid-lg-col-3">

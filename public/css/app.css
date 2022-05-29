@@ -556,19 +556,19 @@ img {
 }
 
 .p-1 {
-  padding: 1em;
+  padding: 1em !important;
 }
 .p-2 {
-  padding: 2em;
+  padding: 2em !important;
 }
 .p-3 {
-  padding: 3em;
+  padding: 3em !important;
 }
 .p-4 {
-  padding: 4em;
+  padding: 4em !important;
 }
 .p-5 {
-  padding: 5em;
+  padding: 5em !important;
 }
 
 .p-t-1 {
@@ -785,7 +785,11 @@ img {
 }
 
 .w-100 {
-  width: 100%;
+  width: 100% !important;
+}
+
+.mw-100 {
+  max-width: 100% !important;
 }
 
 .vh-10 {
@@ -3268,7 +3272,8 @@ Remove or comment-out the code block below to see how the browser will fall-back
   gap: 1rem;
   max-width: 400px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
+  width: 100%;
 }
 
 .contact-form input:focus {
@@ -3314,7 +3319,21 @@ p {
 }
 
 .social {
+  width: 400px;
+  margin: 0;
+}
+
+.social-links {
+  font-size: 1.8rem;
   width: 500px;
+}
+
+.fa-brands {
+  font-size: 2rem;
+}
+
+.fa-solid {
+  font-size: 2rem;
 }
 
 .about .content {
