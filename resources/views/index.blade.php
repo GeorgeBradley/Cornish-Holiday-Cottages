@@ -24,19 +24,19 @@
                         <!-- <button class="btn">Start your search</button> -->
                         <button class="btn m-t-1">Learn More</button>
                     </div>
-                    <img src="{{ asset('/images/cottages/cottage6.jpeg') }}" alt="" class="img-overlay">
+                    <img src="{{ asset('/images/cottages/cottage6.jpeg') }}" alt="An image" class="img-overlay">
                 </li>
                 <li class="carousel-item">
-                    <img src="{{ asset('images/testimonials/cottage-dark.jpeg') }}" alt="">
+                    <img src="{{ asset('images/testimonials/cottage-dark.jpeg') }}" alt="An image">
                 </li>
                     <li class="carousel-item">
-                    <img src="{{ asset('images/cottages/cottage1.jpeg') }}" alt="">
+                    <img src="{{ asset('images/cottages/cottage1.jpeg') }}" alt="An image">
                 </li>
                 <li class="carousel-item">
-                    <img src="{{ asset('images/cottages/cottage4.jpeg') }}" alt="">
+                    <img src="{{ asset('images/cottages/cottage4.jpeg') }}" alt="An image">
                 </li>
                 <li class="carousel-item">
-                    <img src="{{ asset('images/cottages/dock.jpeg') }}" alt="">
+                    <img src="{{ asset('images/cottages/dock.jpeg') }}" alt="An image">
                 </li>
   
             </ul>
@@ -101,23 +101,23 @@
     <div class="flex flex-fw-w gap-2  ">
         <div class="hero-img-item flex flex-jc-c flex-ai-c">
             <h1 class="hero-img-caption">A fresh breeze</h1>
-            <img src="{{asset('images/cottages/beach.jpeg')}}" alt="" class="img-overlay">
+            <img src="{{asset('images/cottages/beach.jpeg')}}" alt="An image" class="img-overlay">
         </div>
         <div class="hero-img-item flex flex-jc-c flex-ai-c">
             <h1 class="hero-img-caption">Story time</h1>
-            <img src="{{asset('images/cottages/cottage-night-time.jpeg')  }}" alt="" class="img-overlay">
+            <img src="{{asset('images/cottages/cottage-night-time.jpeg')  }}" alt="An image" class="img-overlay">
         </div>
         <div class="hero-img-item flex flex-jc-c flex-ai-c">
             <h1 class="hero-img-caption">Sail away</h1>
-            <img src="{{ asset('images/cottages/dock.jpeg') }}" alt="" class="img-overlay">
+            <img src="{{ asset('images/cottages/dock.jpeg') }}" alt="An image" class="img-overlay">
         </div>
         <div class="hero-img-item flex flex-jc-c flex-ai-c">
             <h1 class="hero-img-caption">Enchanting sunsets</h1>
-            <img src="{{ asset('images/cottages/pexels-photo-4687530.jpeg') }}" alt="" class="img-overlay">
+            <img src="{{ asset('images/cottages/pexels-photo-4687530.jpeg') }}" alt="An image" class="img-overlay">
         </div>
         <div class="hero-img-item flex flex-jc-c flex-ai-c">
             <h1 class="hero-img-caption">Cottages</h1>
-            <img src="{{ asset('images/cottages/cottage6.jpeg') }}" alt="" class="img-overlay">
+            <img src="{{ asset('images/cottages/cottage6.jpeg') }}" alt="An image" class="img-overlay">
         </div>
     </div>
 </section>
@@ -177,7 +177,7 @@
 
         </div>
         <div class="about-image">
-            <img src="{{ asset('images/cottages/cottage2.jpeg') }}" alt="">
+            <img src="{{ asset('images/cottages/cottage2.jpeg') }}" alt="An image">
         </div>
 
     </div>
@@ -201,7 +201,7 @@
            
            
             <div class="img-container">
-                <img src=" {{ asset('images/testimonials/pexels-photo-762020.jpeg') }}" alt="" class="profile-pic bs-2">
+                <img src=" {{ asset('images/testimonials/pexels-photo-762020.jpeg') }}" alt="An image" class="profile-pic bs-2">
             </div>
             <h1 class="name">Sarah Clark</h1>
        
@@ -223,7 +223,7 @@
            
            
         <div class="img-container">
-            <img src=" {{ asset('images/testimonials/man1.jpeg') }}" alt="" class="profile-pic bs-2">
+            <img src=" {{ asset('images/testimonials/man1.jpeg') }}" alt="An image" class="profile-pic bs-2">
         </div>
         <h1 class="name">John Smith</h1>
    
@@ -245,7 +245,7 @@
            
            
     <div class="img-container">
-        <img src="images/testimonials/man3.jpeg" alt="" class="profile-pic bs-2">
+        <img src="images/testimonials/man3.jpeg" alt="An image" class="profile-pic bs-2">
     </div>
     <h1 class="name">Kevin Jenkins</h1>
 
@@ -267,7 +267,7 @@
            
            
 <div class="img-container">
-    <img src="{{ asset('images/testimonials/woman1.jpeg') }}" alt="" class="profile-pic bs-2">
+    <img src="{{ asset('images/testimonials/woman1.jpeg') }}" alt="An image" class="profile-pic bs-2">
 </div>
 <h1 class="name">Sue Keown</h1>
 
@@ -289,7 +289,7 @@ consequatur saepe fuga suscipit, voluptatibus debitis rerum vel.</blockquote>
            
            
 <div class="img-container">
-    <img src=" {{ asset('images/testimonials/pexels-photo-532220.jpeg') }}" alt="" class="profile-pic bs-2">
+    <img src=" {{ asset('images/testimonials/pexels-photo-532220.jpeg') }}" alt="An image" class="profile-pic bs-2">
 </div>
 <h1 class="name">Beth Adams</h1>
 
@@ -311,7 +311,7 @@ consequatur saepe fuga suscipit, voluptatibus debitis rerum vel.</blockquote>
            
            
 <div class="img-container">
-    <img src=" {{ asset('images/testimonials/man2.jpeg') }}" alt="" class="profile-pic bs-2">
+    <img src=" {{ asset('images/testimonials/man2.jpeg') }}" alt="An image" class="profile-pic bs-2">
 </div>
 <h1 class="name">Andy Pierce</h1>
 
