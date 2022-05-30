@@ -17,26 +17,24 @@
                 <ul class="">
                     <li><a href="">Contact Us</a></li>
                     <li><a href="">About Us</a></li>
-                    <li><a href="">Let your property</a></li>
-                    <li><a href="">Holiday homes for sale</a></li>
-                    <li><a href="">Newsletter</a></li>
-                    <li><a href="">Guest Reviews</a></li>
+                    <li><a href="">Demo Link Item</a></li>
+                    <li><a href="">Demo Link Item</a></li>
+                    <li><a href="">Demo Link Item</a></li>
+                    <li><a href="">Demo Link Item</a></li>
                 </ul>
 
                 <ul class="">
                     <li><a href="">FAQs</a></li>
-                    <li><a href="">Booking terms</a></li>
-                    <li><a href="">Careers</a></li>
-                    <li><a href="">Prices</a></li>
-                    <li><a href="">Affiliates</a></li>
-                    <li><a href="">Blog</a></li>
+                    <li><a href="">Demo Link Item</a></li>
+                    <li><a href="">Demo Link Item</a></li>
+                    <li><a href="">Demo Link Item</a></li>
+                    <li><a href="">Demo Link Item</a></li>
+                    <li><a href="">Demo Link Item</a></li>
                 </ul>
                 <ul class="">
-                    <li><a href="">Cookie Policy</a></li>
-                    <li><a href="">Privacy Notice</a></li>
-                    <li><a href="">Terms of Use</a></li>
-                    <li><a href="">Sitemap</a></li>
-                    <li><a href="">Help/support</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+
+           
 
                 </ul>
 
