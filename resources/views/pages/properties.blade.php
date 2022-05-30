@@ -26,7 +26,7 @@
             @endauth
             
             <div class="property-img-container">
-            <img src="{{asset('images/property-thumbnails/' . $property->image_path) }}" alt="An property image" class="">
+            <img src="{{asset('images/property-thumbnails/' . $property->image_path) }}" alt="An property image">
             </div>
             <div class="property-info">
 
