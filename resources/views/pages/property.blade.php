@@ -30,7 +30,7 @@
             </div>
         
             <div class="">
-                <img src="{{ asset('images/property-thumbnails/' . $property->image_path) }}" class="property-thumbnail-image" alt="">
+                <img src="{{ asset('images/property-thumbnails/' . $property->image_path) }}" class="property-thumbnail-image" alt="An image">
             </div>
         </div>
 
