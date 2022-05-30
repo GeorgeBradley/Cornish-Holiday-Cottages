@@ -29,14 +29,25 @@
                 {{ $property->about_info }}
             </div>
         
+
             <div class="">
                 <img src="{{ asset('images/property-thumbnails/' . $property->image_path) }}" class="property-thumbnail-image" alt="An image">
             </div>
         </div>
+        <div class="content grid grid-col-1 grid-lg-col-2 gap-2">
+            <ul class="flex flex-fd-r gap-3 m-t-1">
 
+                <li class="flex gap-1 tooltip"><span class="tooltiptext">Number of Sleeps</span><span class="fa-solid fa-bed"></span>{{ $property->number_of_sleeps }}</li>
+                    <li class="flex gap-1 tooltip"><span class="tooltiptext">Number of Bedrooms</span> <span class="fa-solid fa-moon"></span> {{ $property->number_of_bedrooms }}</li>
+                    <li class="flex gap-1 tooltip"><span class="tooltiptext">Number of Bathrooms</span> <span class="fa-solid fa-shower"></span>{{ $property->number_of_bathrooms }}</li>
+                    <li class="flex gap-1 tooltip"><span class="tooltiptext">Are pets allowed?</span><span class="fa-solid fa-paw"></span>{{ $property->allow_pets ? ' Yes' : 'No' }}</li>
+            </ul>
+
+        </div>
     </div>
    
 </section>
+
 
 <section class="m-t-3 container m-b-2">
 
