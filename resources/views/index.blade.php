@@ -69,7 +69,7 @@
 <section class="sign-up bg-light p-1">
     <div class="container ta-c flex-fd-c flex flex-ai-c">
         <h3 class="m-b-1">Sign up to receive our latest news & offers</h3>
-        <form action="" class="flex flex-fd-c-md flex-jc-c gap-1" style="width:100%;">
+        <form class="flex flex-fd-c-md flex-jc-c gap-1" style="width:100%;">
 
             <div>
                 <input type="text" class="p-1 bs-2" placeholder="First Name">
