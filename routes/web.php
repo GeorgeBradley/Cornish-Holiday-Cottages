@@ -3,6 +3,7 @@
 use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PrivacyPolicy;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PagesController;
@@ -30,6 +31,8 @@ Route::get('/', [PagesController::class, 'index'])->name('landing-page');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login',[LoginController::class, 'store']);
 Route::get('/properties', [PropertyController::class, 'show'])->name('properties');
+
+Route::get('/privacy-policy', [PrivacyPolicy::class, 'index'])->name('privacy-policy');
 Route::get('/bookings', [BookingsController::class, 'index'])->name('bookings');
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');

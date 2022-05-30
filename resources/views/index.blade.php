@@ -7,8 +7,15 @@
 @section('content')
 <section class="hero">
 
+    @auth
+    <div class="flex gap-1 p-1">
+        <h4>Edit Slider</h4>
+                 <input type="file" multiple>
+         </div>
+    @endauth
     <div class="hero-banner">
         <div class="carousel">
+              
             <input type="radio" id="carousel-1" name="carousel[]" checked>
             <input type="radio" id="carousel-2" name="carousel[]">
             <input type="radio" id="carousel-3" name="carousel[]">
@@ -66,6 +73,20 @@
 
 
 </section>
+
+@auth
+<div class="flex gap-1 p-1 flex-fd-c">
+    <div class="">
+
+        <button class="add-new-property-btn flex flex-jc-c flex-ai-c gap-1">Add New Section</button>
+    </div>
+     @endauth
+@auth
+<div class="flex gap-1 p-1">
+    <h4>Edit Slider</h4>
+  
+     </div>
+@endauth
 <section class="sign-up bg-light p-1">
     <div class="container ta-c flex-fd-c flex flex-ai-c">
         <h3 class="m-b-1">Sign up to receive our latest news & offers</h3>

@@ -8,9 +8,16 @@
                     <img src="/images/logo_smaller.png" alt="">
                     <h1 class="logo-text tt-c ta-c">
                         Cornish Holiday Cottages </h1>
-
+                        @auth
+                        <div class="flex gap-1 p-1 flex-fd-c">
+                            <h4>Change Logo</h4>
+                            <input type="file">
+                             </div>
+                             @endauth
                 </div>
-
+        
+                
+            
             </a>
 
             <ul class="nav-items flex hide-for-mobile">
