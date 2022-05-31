@@ -11,6 +11,7 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BookingsController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\WebsiteSettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,7 @@ Route::get('/properties/newproperty', [PropertyController::class, 'newProperty']
 Route::post('/addproperty', [PropertyController::class, 'store'])->name('addNewProperty');
 
 
+Route::get('websiteSettings', [WebsiteSettingsController::class, 'index'])->name('updateWebsiteSettings');
 Route::post('/logout', [LogoutController::class, 'perform'])->name('logout');
 
 Route::get('/email', function(){

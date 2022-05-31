@@ -1,0 +1,32 @@
+.website-settings-form-container {
+
+    max-width:900px;
+    width:100%;
+    background-color:white;
+    margin-bottom:auto;
+    margin-top:1rem;
+ 
+
+}
+.website-settings-form-container form {
+    margin-top:1rem;
+}
+.website-settings-form input {
+
+    padding: .3em .3rem;
+
+}
+.website-settings-form .form-controls {
+    
+        display:flex;
+        gap:.3rem;
+    
+}
+
+.button {
+    padding:1rem;
+   
+    background-color:rgb(161, 39, 161);
+    color:#fff;
+    border:1px solid #ccc;
+}

@@ -33,6 +33,12 @@
 
 
             </form>
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <a href="/websiteSettings" class="btn m-l-1 hide-for-mobile">Settings</a>
+
+
+            </form>
            
 
             @endauth

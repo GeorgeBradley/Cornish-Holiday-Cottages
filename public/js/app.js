@@ -61,6 +61,10 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
   });
 });
 
+function calculateDaysBetweenDates(begin, end) {}
+
+function howManyDaysBetweenDates(begin, end) {}
+
 /***/ }),
 
 /***/ "./resources/scss/app.scss":

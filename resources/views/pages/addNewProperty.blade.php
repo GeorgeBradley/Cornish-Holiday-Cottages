@@ -68,6 +68,7 @@
                 </div>
                 @enderror
             </div>
+        
             <div class="form-control">
                 <label for="">Are pets allowed?</label>
                 <input type="checkbox" name="are_pets_allowed">
