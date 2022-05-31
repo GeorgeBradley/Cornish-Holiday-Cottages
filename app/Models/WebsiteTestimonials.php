@@ -8,8 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class WebsiteTestimonials extends Model
 {
     use HasFactory;
-
-    protected $table = 'website_tesimonials';
+    protected $table = 'website_infos';
     protected $primaryKey = 'id';
 
    // protected $timestamps = false;
@@ -17,12 +16,21 @@ class WebsiteTestimonials extends Model
 
    protected $fillable = [
 
-    'nameOfPerson', 'rating', 'rating', 'imagePath'
+
+    'website_name',
+    'website_logo_path',
+    'page_title',
+    'page_description', 
+    'admin_email_address',
+    'tagline'
 
    ];
 
    protected $hidden = [
      
    ];
+
+   
+
 
 }

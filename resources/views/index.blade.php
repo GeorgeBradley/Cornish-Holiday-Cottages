@@ -26,8 +26,8 @@
                 <li class="carousel-item flex flex-jc-c flex-ai-c">
 
                     <div class="img-caption">
-                        <h1 class="fs-5 fs-7-lg">Cornwall Holiday Cottages</h1>
-                        <p class="">Your next adventure begins here.</p>
+                        <h1 class="fs-5 fs-7-lg">{{ $website_info->website_name }}</h1>
+                        <p class="">{{ $website_info->tagline }}</p>
                         <!-- <button class="btn">Start your search</button> -->
                         <button class="btn m-t-1">Learn More</button>
                     </div>

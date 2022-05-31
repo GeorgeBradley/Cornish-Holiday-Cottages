@@ -23,7 +23,8 @@
             @endif
             <div class="form-controls flex flex-fd-c">
                 <label for="">Website Name</label>
-                <input type="text" value="{{ old('email') }}"  name="websiteName" class="@error('email') red-border  @enderror" placeholder="">
+                
+                <input type="text" value="{{ $website_info->website_name}}"  name="websiteName" class="@error('email') red-border  @enderror" placeholder="">
     
                 @error('websiteName')
                
@@ -55,7 +56,7 @@
             </div>
        <div class="form-controls flex flex-fd-c">
                 <label for="">Page Title</label>
-                <input type="text" name="password" placeholder="" class="@error('page_title') red-border  @enderror">
+                <input type="text" name="password" value="{{ $website_info->page_title}}"placeholder="" class="@error('page_title') red-border  @enderror">
                 @error('website_logo')
                
                 <div class="error-message-container">
@@ -74,7 +75,7 @@
 
         <div class="form-controls flex flex-fd-c">
             <label for="">Tagline</label>
-            <input type="text" name="password" placeholder="" class="@error('page_title') red-border  @enderror">
+            <input type="text" value="{{ $website_info->tagline}}" name="tagline" placeholder="" class="@error('page_title') red-border  @enderror">
             @error('website_logo')
            
             <div class="error-message-container">
@@ -90,7 +91,7 @@
         </div>
         <div class="form-controls flex flex-fd-c">
             <label for="">Admin Email Address</label>
-            <input type="email" name="admin_email_address" placeholder="" class="@error('admin_email_address') red-border  @enderror">
+            <input type="email" value="{{ $website_info->admin_email_address}}" name="admin_email_address" placeholder="" class="@error('admin_email_address') red-border  @enderror">
             @error('admin_email_address')
            
             <div class="error-message-container">
