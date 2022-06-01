@@ -24,9 +24,9 @@
             <div class="form-controls flex flex-fd-c">
                 <label for="">Website Name</label>
                 
-                <input type="text" value="{{ $website_info->website_name}}"  name="websiteName" class="@error('email') red-border  @enderror" placeholder="">
+                <input type="text" value="{{ $website_info->website_name}}"  name="website_name" class="@error('website_name') red-border  @enderror" placeholder="">
     
-                @error('websiteName')
+                @error('website_name')
                
                     <div class="error-message-container">
                         <p class="error-message">
@@ -54,7 +54,7 @@
             
                     @enderror
                     <label for="">Website Logo</label>
-                    <input type="file" name="password" placeholder="" class="@error('website_logo') red-border  @enderror">
+                    <input type="text" name="website_logo" placeholder="" value="{{ $website_info->website_logo_path}}" class="@error('website_logo') red-border  @enderror">
                 </div>
               
                 
@@ -70,8 +70,8 @@
             </div>
        <div class="form-controls flex flex-fd-c">
                 <label for="">Page Title</label>
-                <input type="text" name="password" value="{{ $website_info->page_title}}"placeholder="" class="@error('page_title') red-border  @enderror">
-                @error('website_logo')
+                <input type="text" name="page_title" value="{{ $website_info->page_title}}"placeholder="" class="@error('page_title') red-border  @enderror">
+                @error('page_title')
                
                 <div class="error-message-container">
                     <p class="error-message">
@@ -90,7 +90,25 @@
         <div class="form-controls flex flex-fd-c">
             <label for="">Tagline</label>
             <input type="text" value="{{ $website_info->tagline}}" name="tagline" placeholder="" class="@error('page_title') red-border  @enderror">
-            @error('website_logo')
+            @error('tagline')
+           
+            <div class="error-message-container">
+                <p class="error-message">
+                    {{ $message }}
+                </p>
+               
+            </div>
+           
+     
+    
+        @enderror
+        </div>
+        <div class="form-controls flex flex-fd-c">
+            <label for="">Page Description</label>
+        
+            <textarea value="" class="@error('page_description') red-border  @enderror" name="page_description" id="" cols="30" rows="10">{{ $website_info->page_description}}</textarea>
+           
+            @error('tagline')
            
             <div class="error-message-container">
                 <p class="error-message">

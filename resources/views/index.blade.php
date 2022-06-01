@@ -185,15 +185,7 @@
 
         <div class="about-text ta-c-md">
 
-            <p class="ta-">Holiday cottages
-                For over 30 years, holidaycottages.co.uk has been providing a first-class service to our guests;
-                just
-                look at our customer reviews. We help people find their perfect cottage in popular holiday
-                destinations
-                from Scotland to Wales, Cornwall to the Lake District and across the whole of the UK. Whether you're
-                looking for a dog-friendly cottage by the sea, farmhouse on the moors or apartment in the city, we
-                have
-                something to suit all requirements and budgets.</p>
+            <p class="ta-">{{ $website_info->page_description }}</p>
 
 
         </div>

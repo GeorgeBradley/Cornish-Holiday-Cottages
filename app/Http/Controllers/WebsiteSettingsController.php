@@ -23,20 +23,21 @@ class WebsiteSettingsController extends Controller
 
     public function update(Request $request) {
 
-        dd($request);
-        $update = DB::table('website_infos') ->where('id', 1)->limit(1)->update
-        ( 
-            [ 
-            'website_name' => $request['website_name'], 
-            'website_logo_path' => $request['website_logo_path'], 
-            'page_title' => $request['page_title'], 
-            'page_description' => $request['page_description'],
-            'admin_email_address' => $request['admin_email_address'],
-            'tagline' => $request['tagline'],
-            ]
-        ); 
+        $website_info = website_info::find(1);
+        $website_info->website_name = $request->website_name;
+        $website_info->website_logo_path = $request->website_logo;
+        $website_info->page_title = $request->page_title;
+        $website_info->page_description = $request->page_description;
+        $website_info->admin_email_address = $request->admin_email_address;
+        $website_info->tagline = $request->tagline;
+      
+        $website_info->save();
+        return redirect('/websiteSettings');
+        
 
 
+       
     }
+
 
 }
