@@ -33,6 +33,7 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login',[LoginController::class, 'store']);
 Route::get('/properties', [PropertyController::class, 'show'])->name('properties');
 
+
 Route::get('/privacy-policy', [PrivacyPolicy::class, 'index'])->name('privacy-policy');
 Route::get('/bookings', [BookingsController::class, 'index'])->name('bookings');
 
@@ -43,7 +44,8 @@ Route::get('/properties/newproperty', [PropertyController::class, 'newProperty']
 Route::post('/addproperty', [PropertyController::class, 'store'])->name('addNewProperty');
 
 
-Route::get('websiteSettings', [WebsiteSettingsController::class, 'index'])->name('updateWebsiteSettings');
+Route::get('websiteSettings', [WebsiteSettingsController::class, 'index'])->name('websiteSettings');
+Route::POST('updateWebsiteSettings', [WebsiteSettingsController::class, 'update'])->name('updateWebsiteSettings');
 Route::post('/logout', [LogoutController::class, 'perform'])->name('logout');
 
 Route::get('/email', function(){

@@ -8,7 +8,7 @@
    
     <div class="website-settings-form-container ">
         <h3 class="form-title">Website Settings</h3>
-    <form action="{{ route('login') }}" class="website-settings-form" method="POST">
+    <form action="{{ route('updateWebsiteSettings') }}" class="website-settings-form" method="POST">
         @csrf
         <div class="form-body flex flex-fd-c gap-2 p-1">
            
@@ -38,21 +38,35 @@
                 @enderror
                 
             </div>
-            <div class="form-controls flex flex-fd-c">
-                <label for="">Website Logo</label>
-                <input type="file" name="password" placeholder="" class="@error('website_logo') red-border  @enderror">
-                @error('website_logo')
+            <div class="form-controls flex flex-fw-w">
+
+                <div class="flex flex-fd-c">
+                    @error('website_logo')
                
-                <div class="error-message-container">
-                    <p class="error-message">
-                        {{ $message }}
-                    </p>
+                    <div class="error-message-container">
+                        <p class="error-message">
+                            {{ $message }}
+                        </p>
+                       
+                    </div>
                    
+             
+            
+                    @enderror
+                    <label for="">Website Logo</label>
+                    <input type="file" name="password" placeholder="" class="@error('website_logo') red-border  @enderror">
                 </div>
-               
-         
-        
-            @enderror
+              
+                
+
+            <div class="website_logo_thumbnail-container">
+                <h4>Current Logo</h4>
+                {{-- <img src="{{ asset('images/website_theme/'.$website_info->website_logo) }}" alt="" class="website-logo-img"> --}}
+                 <img src="{{ asset('/images/website_theme/logo_smaller.png') }}" alt="" class="website-logo-img"> 
+
+
+
+            </div>
             </div>
        <div class="form-controls flex flex-fd-c">
                 <label for="">Page Title</label>

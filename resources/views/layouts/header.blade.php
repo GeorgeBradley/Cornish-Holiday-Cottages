@@ -4,10 +4,10 @@
     <div class="container-fluid">
         <nav class="header-nav flex flex-jc-sb flex-ai-c">
             <a href="#" class="logo p-l-1">
-                <div class="logo-container flex flex-ai-c gap-2">
-                    <img src="/images/logo_smaller.png" alt="">
+                <div class="logo-container flex flex-ai-c gap-2 flex-fw-w">
+                    <img src="{{ asset('/images/website_theme/' . $website_info->website_logo_path) }}" alt="">
                     <h1 class="logo-text tt-c ta-c">
-                        Cornish Holiday Cottages </h1>
+                        {{ $website_info->website_name }}</h1>
                         @auth
                         <div class="flex gap-1 p-1 flex-fd-c">
                             <h4>Change Logo</h4>

@@ -18,6 +18,10 @@ class PropertyController extends Controller
             'properties' => $properties
         ]);
     }
+    public function pageHeader()
+    {
+        return view('layouts.header');
+    }
     public function property($id)
     {
         $recommendedProperties = Property::limit(3)->where('id', '!=', $id)->get();
