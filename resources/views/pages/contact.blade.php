@@ -26,8 +26,8 @@
     </div>
 </div>
 
-    <form method="POST" action=""  class="contact-form flex flex-jc-c flex-fd-c flex-fs-1 mw-100">
-    
+    <form method="POST" action="{{ route('addContact') }}"  class="contact-form flex flex-jc-c flex-fd-c flex-fs-1 mw-100">
+        @csrf
         <div class="flex flex-fw-w gap-1">
             <div class="flex flex-fd-c flex-fg-1 gap-1">
                 <label for="">First Name</label>
