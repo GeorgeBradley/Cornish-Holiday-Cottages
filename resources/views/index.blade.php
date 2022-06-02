@@ -206,7 +206,7 @@
 
 <div class="">
     <h1 class="section-title ta-c">Testimonials</h1>
-    <button>Add New Testimonial</button>
+
 </div>
   
     <div class="testimonial-cards grid gap-5 grid-col-1 grid-sm-col-2 grid-md-col-2 grid-lg-col-3">
