@@ -59,7 +59,7 @@
         <button class="submit">Send</button>
     </div>
     
-    {{ $status  }}
+    {{ $status ?? '' }}
     </form>    
 </div>
 
