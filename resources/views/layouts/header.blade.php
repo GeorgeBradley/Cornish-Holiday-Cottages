@@ -25,6 +25,7 @@
                 <li><a href="/properties" class="{{ (request()->is('properties')) ? 'nav-item-active' : ''  }}">Properties</a></li>
 
                 <li><a href="/contact" class="{{ (request()->is('contact')) ? 'nav-item-active' : ''  }}">Contact</a></li>
+                <li><a href="/websiteSettings" class="{{ (request()->is('websiteSettings')) ? 'nav-item-active' : ''  }}">Theme Settings</a></li>
             </ul>
             @auth
             <form action="{{ route('logout') }}" method="POST">
@@ -33,12 +34,11 @@
 
 
             </form>
-            <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <a href="/websiteSettings" class="btn m-l-1 hide-for-mobile">Settings</a>
+       
+  
 
 
-            </form>
+
            
 
             @endauth

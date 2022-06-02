@@ -3153,10 +3153,6 @@ footer .sm-links i {
   padding: 40px;
 }
 
-.website_logo_thumbnail-container {
-  width: 200px;
-}
-
 :root {
   --danger-color:#d9534f;
   --success-color:#5cb85c;
@@ -3622,6 +3618,16 @@ p {
   background-color: #a127a1;
   color: #fff;
   border: 1px solid #ccc;
+}
+
+.website_logo_thumbnail-container {
+  width: 100px;
+  height: 100px;
+}
+
+.website_logo_thumbnail-container img {
+  width: auto;
+  height: auto;
 }
 
 .full-screen-container {
