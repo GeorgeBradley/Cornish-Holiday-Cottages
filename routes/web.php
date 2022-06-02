@@ -50,7 +50,3 @@ Route::post('/logout', [LogoutController::class, 'perform'])->name('logout');
 
 
 Route::post('/contact', [PagesController::class, 'send_mail'])->name('addContact');
-Route::get('/email', function(){
-    Mail::to('info@darynazar.com')->send(new ContactMail);
-    return new ContactMail();
-});

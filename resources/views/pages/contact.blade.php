@@ -32,27 +32,52 @@
             <div class="flex flex-fd-c flex-fg-1 gap-1">
                 <label for="">First Name</label>
                 <input type="text" name="first_name">
+                @error('first_name')
+                <div class="error-message-container">
+                    <p class="error-message">{{ $message }}</p>
+                </div>
+            @enderror
             </div>
             <div class="flex flex-fd-c flex-fg-1 gap-1">
                 <label for="">Last Name</label>
                 <input type="text" name="last_name">
+                @error('last_name')
+                <div class="error-message-container">
+                    <p class="error-message">{{ $message }}</p>
+                </div>
+            @enderror
             </div>
+          
         </div>
     
     
     <div class="flex flex-fd-c gap-1">
         <label for="">Your Email</label>
         <input type="email" name="email">
+        @error('email')
+        <div class="error-message-container">
+            <p class="error-message">{{ $message }}</p>
+        </div>
+    @enderror
     </div>
     
     <div class="flex flex-fd-c gap-1">
         <label for="">Enquiry Title</label>
         <input type="text" name="enquiry_title">
-    
+        @error('enquiry_title')
+        <div class="error-message-container">
+            <p class="error-message">{{ $message }}</p>
+        </div>
+    @enderror
     </div>
     <div class="flex flex-fd-c gap-1">
         <label for="">Enquiry Message</label>
-        <textarea name="" id="" cols="30" rows="10" name="message"></textarea>
+        <textarea id="" cols="30" rows="10" name="message"></textarea>
+        @error('message')
+        <div class="error-message-container">
+            <p class="error-message">{{ $message }}</p>
+        </div>
+         @enderror
     </div>
     
     <div class="flex flex-fd-c gap-1">
