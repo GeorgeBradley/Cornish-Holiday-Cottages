@@ -2940,6 +2940,7 @@ img {
   margin: 0;
 }
 .testimonials .testimonial-card {
+  max-width: 250px;
   position: relative;
   overflow: hidden;
   position: relative;
@@ -3224,16 +3225,16 @@ footer .sm-links i {
   display: flex;
   flex-wrap: wrap;
   /* Compensate for excess margin on outer gallery flex items */
-  margin: -1rem -1rem;
+  justify-content: center;
 }
 
 .gallery-item {
   /* Minimum width of 24rem and grow to fit available space */
-  flex: 1 0 24rem;
   /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
   margin: 1rem;
   box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
   overflow: hidden;
+  max-width: 200px;
 }
 
 .gallery-image {
@@ -3256,18 +3257,6 @@ The following rule will only run if your browser supports CSS grid.
 Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
 
 */
-@supports (display: grid) {
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-    grid-gap: 2rem;
-  }
-
-  .gallery,
-.gallery-item {
-    margin: 0;
-  }
-}
 .contact-form {
   gap: 1rem;
   max-width: 400px;
@@ -3354,7 +3343,7 @@ p {
 }
 
 .property-thumbnail-image {
-  width: 500px;
+  max-width: 500px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -3401,6 +3390,12 @@ p {
 
 .btn.btn-logout {
   transition: all 150ms ease-in-out;
+}
+
+.back {
+  padding: 1rem;
+  color: #fff;
+  background-color: #212529 !important;
 }
 
 .container,

@@ -28,6 +28,8 @@
                @auth 
                 <li><a href="/websiteSettings" class="{{ (request()->is('websiteSettings')) ? 'nav-item-active' : ''  }}">Theme Settings</a></li>
                 @endauth
+
+                
             </ul>
             @auth
             <form action="{{ route('logout') }}" method="POST">

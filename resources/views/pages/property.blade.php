@@ -3,13 +3,13 @@
 <nav class="property-details-nav bs-1">
 
     <div class="container">
-        <ul class="nav-items flex flex-jc-se  p-1 flex-ai-c">
+        <ul class="nav-items flex flex-jc-se p-1 flex-ai-c flex-fw-w">
 
-            <li><a href="/properties.html" class="btn">Back</a></li>
-            <li><a href="#overview" class="property-details-nav-item">Overview</a></li>
-            <li><a href="#testimonials" class="property-details-nav-item">Reviews</a></li>
+          
+            <li><a href="#overview" class="property-details-nav-item">Description</a></li>
+            <li><a href="#booking" class="property-details-nav-item">Booking</a></li>
             <li><a href="#images" class="property-details-nav-item">Photos</a></li>
-            <li><a href=""class="property-details-nav-item">Location</a></li>
+            <li><a href="#testimonials" class="property-details-nav-item">Testimonials</a></li>
     
     
         </ul>
@@ -19,14 +19,19 @@
 
 </nav>
 
+
+
+
 <section class="overview m-t-3 m-b-3" id="overview">
     <div class="container">
+        <a href="/properties" class="back">Back</a>
         <h1 class="ta-c m-b-2">{{ $property->property_title }}</h1>
         <div class="content grid grid-col-1 grid-lg-col-2 gap-2">
     
             <div class="bs-1 p-1">
                 <h2 class="m-b-1">Description</h2>
-                {{ $property->about_info }}
+                <p>
+                    {{ $property->about_info }}</p>
             </div>
         
 
@@ -49,7 +54,7 @@
 </section>
 
 
-<section class="m-t-3 container m-b-2">
+<section class="m-t-3 container m-b-2" id="booking">
 
     <h2>Booking Enquiry</h2>
     <div class="social flex flex-jc-c flex-fw-w w-100">
@@ -113,24 +118,20 @@
 
 <section>
     
-<section class="testimonials m-t-3 m-b-3 container">
+<section class="testimonials m-t-3 m-b-3 container" id="testimonials">
 
     <div class="">
         <h1 class="section-title ta-c">Testimonials</h1>
         <button class="add-new-property-btn flex flex-jc-c flex-ai-c gap-1">Add New Testimonial</button>
     </div>
       
-        <div class="testimonial-cards grid gap-5 grid-col-1 grid-sm-col-2 grid-md-col-2 grid-lg-col-3">
+        <div class="testimonial-cards flex flex-fw-w flex-jc-c gap-3">
             <div class="testimonial-card flex flex-jc-c flex-ai-c flex-fd-c p-1 bs-1 gap-1">
-               
-               
+            
                 <div class="img-container">
-                    <img src="images/testimonials/pexels-photo-762020.jpeg" alt="" class="profile-pic bs-2">
+                    <img src="{{asset('images/testimonials/man1.jpeg')  }}" alt="" class="profile-pic bs-2">
                 </div>
-                <h1 class="name">Sarah Clark</h1>
-           
-        
-    
+                <h1 class="name">Sarah Doe</h1>
             <div class="stars">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -141,12 +142,46 @@
             
             <blockquote class="ta-c">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia incidunt corrupti ducimus
                 consequatur saepe fuga suscipit, voluptatibus debitis rerum vel.</blockquote>
-        </div>
+            </div>
+            <div class="testimonial-card flex flex-jc-c flex-ai-c flex-fd-c p-1 bs-1 gap-1">
+            
+                <div class="img-container">
+                    <img src="{{asset('images/testimonials/man2.jpeg')  }}" alt="" class="profile-pic bs-2">
+                </div>
+                <h1 class="name">Andy Bell</h1>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+            </div>
+            
+            <blockquote class="ta-c">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia incidunt corrupti ducimus
+                consequatur saepe fuga suscipit, voluptatibus debitis rerum vel.</blockquote>
+            </div>
+            <div class="testimonial-card flex flex-jc-c flex-ai-c flex-fd-c p-1 bs-1 gap-1">
+            
+                <div class="img-container">
+                    <img src="{{asset('images/testimonials/man3.jpeg')  }}" alt="" class="profile-pic bs-2">
+                </div>
+                <h1 class="name">John Smith</h1>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+            </div>
+            
+            <blockquote class="ta-c">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia incidunt corrupti ducimus
+                consequatur saepe fuga suscipit, voluptatibus debitis rerum vel.</blockquote>
+            </div>
     
 </section>
 <section class="properties m-t-3 container m-b-2">
     <h1 class="ta-c m-b-2">Recommended Properties</h1>
-<div class="grid grid-col-1 grid-sm-col-1 grid-md-col-2 grid-lg-col-3 grid-xl-col-4 gap-4">
+<div class="flex flex-fw-w gap-3 flex-jc-c">
        
     @foreach ($recommendedProperties as $recommendedProperty)
 
@@ -167,7 +202,7 @@
 
             <h2>{{ $recommendedProperty->property_title }}</h2>
             <p>{{ $recommendedProperty->location }}</strong></p>
-            <ul class="flex gap-1">
+            <ul class="flex flex-fw-w flex-jc-c gap-1">
                 <li class="flex gap-1 tooltip"><span class="tooltiptext">Number of Sleeps</span><span class="fa-solid fa-bed"></span>{{ $recommendedProperty->number_of_sleeps }}</li>
                 <li class="flex gap-1 tooltip"><span class="tooltiptext">Number of Bedrooms</span> <span class="fa-solid fa-moon"></span> {{ $recommendedProperty->number_of_bedrooms }}</li>
                 <li class="flex gap-1 tooltip"><span class="tooltiptext">Number of Bathrooms</span> <span class="fa-solid fa-shower"></span>{{ $recommendedProperty->number_of_bathrooms }}</li>

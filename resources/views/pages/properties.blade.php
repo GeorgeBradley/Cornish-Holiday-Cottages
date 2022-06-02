@@ -11,7 +11,7 @@
         @endauth
     </div>
 
-    <div class="grid grid-col-1 grid-sm-col-1 grid-md-col-2 grid-lg-col-3 grid-xl-col-4 gap-4">
+    <div class="flex flex-fw-w flex-jc-c gap-3">
        
         @foreach ($properties as $property)
 
