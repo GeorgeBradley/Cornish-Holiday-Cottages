@@ -24,7 +24,10 @@
 
 <section class="overview m-t-3 m-b-3" id="overview">
     <div class="container">
-        <a href="/properties" class="back">Back</a>
+        <div class="back-div flex flex-jc-c">
+            <a href="/properties" class="back">Back</a>
+        </div>
+  
         <h1 class="ta-c m-b-2">{{ $property->property_title }}</h1>
         <div class="content grid grid-col-1 grid-lg-col-2 gap-2">
     

@@ -3217,6 +3217,13 @@ footer .sm-links i {
   background-color: aqua;
 }
 
+.back-div a {
+  justify-self: flex-start;
+  align-self: flex-start;
+  margin-right: auto;
+  padding: 1rem;
+}
+
 .heading span {
   display: block;
 }
@@ -3300,7 +3307,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 1.7rem;
 }
 
 p {
