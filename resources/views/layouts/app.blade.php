@@ -23,7 +23,8 @@
     ></script>
     {{-- End of recently added --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <title>Document</title>
+    <link rel="icon" href="{{asset('images/website_theme/' . $website_info->website_logo_path) }}"  type="image/icon type">
+    <title>{{ $website_info->page_title }}</title>
 </head>
 <body>
 
