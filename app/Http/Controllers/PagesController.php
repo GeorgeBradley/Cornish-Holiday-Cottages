@@ -59,6 +59,6 @@ class PagesController extends Controller
     
         Mail::to('mail@ws239618-awt.remote.ac')->send(new ContactFormMail($contact));
         
-        return redirect()->route('contact')->with('status', 'Your Mail has been received');
+        return redirect()->route('contact')->with('status', 'Your message has been sent!');
     }
 }
