@@ -49,7 +49,7 @@ Route::POST('updateWebsiteSettings', [WebsiteSettingsController::class, 'update'
 Route::post('/logout', [LogoutController::class, 'perform'])->name('logout');
 
 
-Route::post('/contact', 'HomeController@send_mail')->name('addContact');
+Route::post('/contact', 'PagesController@send_mail')->name('addContact');
 Route::get('/email', function(){
     Mail::to('info@darynazar.com')->send(new ContactMail);
     return new ContactMail();
