@@ -3,7 +3,7 @@
 
 ## {{$message}}
 
-Feel free to contact me via {{$email}}
+You have recieved an email from: {{$email}}
 
 Thanks,<br>
 {{$first_name}} {{$last_name}}
