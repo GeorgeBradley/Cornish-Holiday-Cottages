@@ -23,9 +23,9 @@
             <ul class="nav-items flex hide-for-mobile">
                 <li class=""><a href="/" class="{{ (request()->is('/')) ? 'nav-item-active' : ''  }}">Home</a></li>
                 <li><a href="/properties" class="{{ (request()->is('properties')) ? 'nav-item-active' : ''  }}">Properties</a></li>
-
+                {{-- <li><a href="/bookings" class="{{ (request()->is('bookings')) ? 'nav-item-active' : ''  }}">Booking</a></li> --}}
                 <li><a href="/contact" class="{{ (request()->is('contact')) ? 'nav-item-active' : ''  }}">Contact</a></li>
-               @auth 
+               @auth    
                 <li><a href="/websiteSettings" class="{{ (request()->is('websiteSettings')) ? 'nav-item-active' : ''  }}">Theme Settings</a></li>
                 @endauth
 
@@ -38,13 +38,7 @@
 
 
             </form>
-       
-  
-
-
-
-           
-
+    
             @endauth
 
 

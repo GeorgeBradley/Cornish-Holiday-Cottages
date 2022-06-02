@@ -6,12 +6,10 @@
         <ul class="nav-items flex flex-jc-se p-1 flex-ai-c flex-fw-w">
 
           
-            <li><a href="#overview" class="property-details-nav-item">Description</a></li>
+            <li><a href="#overview" class="property-details-nav-item">Property & Local Area</a></li>
             <li><a href="#booking" class="property-details-nav-item">Booking</a></li>
-            <li><a href="#images" class="property-details-nav-item">Photos</a></li>
-            <li><a href="#testimonials" class="property-details-nav-item">Testimonials</a></li>
-    
-    
+            <li><a href="#images" class="property-details-nav-item">Accommodation / Gallery</a></li>
+            <li><a href="#testimonials" class="property-details-nav-item">Property reviews</a></li>
         </ul>
     
     </div>
@@ -106,7 +104,7 @@
     
     </section>
 <section class="property-images m-t-3 m-b-3" id="images">
-    <h1 class="ta-c m-b-2">Photos</h1>
+    <h1 class="ta-c m-b-2">Gallery / Media</h1>
     <div class="container">
 
 <div class="gallery">
@@ -124,7 +122,7 @@
 <section class="testimonials m-t-3 m-b-3 container" id="testimonials">
 
     <div class="">
-        <h1 class="section-title ta-c">Testimonials</h1>
+        <h1 class="section-title ta-c">Property reviews</h1>
         <button class="add-new-property-btn flex flex-jc-c flex-ai-c gap-1">Add New Testimonial</button>
     </div>
       
@@ -201,17 +199,7 @@
         <div class="property-img-container">
         <img src="{{asset('images/property-thumbnails/' . $recommendedProperty->image_path) }}" alt="" class="">
         </div>
-        <div class="property-info">
-
-            <h2>{{ $recommendedProperty->property_title }}</h2>
-            <p>{{ $recommendedProperty->location }}</strong></p>
-            <ul class="flex flex-fw-w flex-jc-c gap-1">
-                <li class="flex gap-1 tooltip"><span class="tooltiptext">Number of Sleeps</span><span class="fa-solid fa-bed"></span>{{ $recommendedProperty->number_of_sleeps }}</li>
-                <li class="flex gap-1 tooltip"><span class="tooltiptext">Number of Bedrooms</span> <span class="fa-solid fa-moon"></span> {{ $recommendedProperty->number_of_bedrooms }}</li>
-                <li class="flex gap-1 tooltip"><span class="tooltiptext">Number of Bathrooms</span> <span class="fa-solid fa-shower"></span>{{ $recommendedProperty->number_of_bathrooms }}</li>
-                <li class="flex gap-1 tooltip"><span class="tooltiptext">Are pets allowed?</span><span class="fa-solid fa-paw"></span>{{ $recommendedProperty->allow_pets ? ' Yes' : 'No' }}</li>
-            </ul>
-        </div>
+        
         <div class="price-box flex flex-fd-c flex-sb-c gap-1">
             <p>Price from</p>
             <h4 class="price">£{{ number_format($recommendedProperty->cost) }}</h4>
