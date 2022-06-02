@@ -25,7 +25,9 @@
                 <li><a href="/properties" class="{{ (request()->is('properties')) ? 'nav-item-active' : ''  }}">Properties</a></li>
 
                 <li><a href="/contact" class="{{ (request()->is('contact')) ? 'nav-item-active' : ''  }}">Contact</a></li>
+               @auth 
                 <li><a href="/websiteSettings" class="{{ (request()->is('websiteSettings')) ? 'nav-item-active' : ''  }}">Theme Settings</a></li>
+                @endauth
             </ul>
             @auth
             <form action="{{ route('logout') }}" method="POST">
