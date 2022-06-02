@@ -84,7 +84,7 @@
         <button class="submit">Send</button>
     </div>
     <div class="flex flex-fd-c gap-1">
-        <p class="success-message"> {{ $status ?? '' }}</p>
+        <p class="success-message"> {{ $status ?? ''}}</p>
     </div>
     
   
