@@ -84,8 +84,22 @@
             <input type="text" value="{{$property->property_title   }}" class="p-1" readonly>
         
         </div>
+
+        <div class="flex flex-fw-w gap-1">
+            <div class="flex flex-fd-c gap-1 flex-fg-1">
+                <label for="">Preferred date from:</label>
+                <input type="date" name="date_from" value="" class="p-1" >
+            
+            </div>
+            <div class="flex flex-fd-c flex-fg-1 gap-1">
+                <label for="">Preferred date to:</label>
+                <input type="date" name="date_to" value="" class="p-1" >
+            
+            </div>
+        </div>
+       
         <div class="flex flex-fd-c gap-1">
-            <label for="">Enquiry Message</label>
+            <label for="">Message</label>
             <textarea name="" id="" cols="30" rows="10"></textarea>
         </div>
         
