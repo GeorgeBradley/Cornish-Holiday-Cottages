@@ -26,33 +26,33 @@
     </div>
 </div>
 
-    <form action="" class="contact-form flex flex-jc-c flex-fd-c flex-fs-1 mw-100">
+    <form method="POST" action=""  class="contact-form flex flex-jc-c flex-fd-c flex-fs-1 mw-100">
     
         <div class="flex flex-fw-w gap-1">
             <div class="flex flex-fd-c flex-fg-1 gap-1">
                 <label for="">First Name</label>
-                <input type="text">
+                <input type="text" name="first_name">
             </div>
             <div class="flex flex-fd-c flex-fg-1 gap-1">
                 <label for="">Last Name</label>
-                <input type="text">
+                <input type="text" name="last_name">
             </div>
         </div>
     
     
     <div class="flex flex-fd-c gap-1">
         <label for="">Your Email</label>
-        <input type="email">
+        <input type="email" name="email">
     </div>
     
     <div class="flex flex-fd-c gap-1">
         <label for="">Enquiry Title</label>
-        <input type="text">
+        <input type="text" name="enquiry_title">
     
     </div>
     <div class="flex flex-fd-c gap-1">
         <label for="">Enquiry Message</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="" id="" cols="30" rows="10" name="message"></textarea>
     </div>
     
     <div class="flex flex-fd-c gap-1">
