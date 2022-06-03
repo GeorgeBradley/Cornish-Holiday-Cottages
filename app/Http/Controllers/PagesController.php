@@ -29,7 +29,7 @@ class PagesController extends Controller
         return view('pages.properties');
     }
 
-    public function bookings(){
+    public function booking(){
         return view ('pages.bookings');
     }
 
@@ -75,8 +75,8 @@ class PagesController extends Controller
             'last_name' => ['required', 'string', 'max:255' ], 
             'date_from' => ['required', 'string', 'max:255' ], 
             'property_name' => ['required', 'string', 'max:255' ], 
-            'date_to' => ['required', 'string', 'email', 'max:255'],
-
+            'date_to' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
             'enquiry_title' => ['required', 'string', 'max:255' ], 
             'message' => ['required', 'string', 'max:255']
         ]);
@@ -96,6 +96,6 @@ class PagesController extends Controller
     
         Mail::to('mail@ws239618-awt.remote.ac')->send(new BookingForm($contact));
         
-        return redirect()->route('contact')->with(['status' => 'Your message has been sent!']);
+        return redirect()->route('booking')->with(['status' => 'Your message has been sent!']);
     }
 }

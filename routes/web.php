@@ -35,7 +35,6 @@ Route::get('/properties', [PropertyController::class, 'show'])->name('properties
 
 
 Route::get('/privacy-policy', [PrivacyPolicy::class, 'index'])->name('privacy-policy');
-Route::get('/bookings', [BookingsController::class, 'index'])->name('bookings');
 
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/property/{property}', [PropertyController::class, 'property'])->name('property');
@@ -51,4 +50,6 @@ Route::post('/logout', [LogoutController::class, 'perform'])->name('logout');
 
 Route::post('/contact', [PagesController::class, 'send_mail'])->name('addContact');
 
-Route::post('/contact', [PagesController::class, 'send_booking_mail'])->name('send_booking_mail');
+
+Route::post('/booking', [PagesController::class, 'send_booking_mail'])->name('addBooking');
+Route::get('/booking', [PagesController::class, 'booking'])->name('booking');
