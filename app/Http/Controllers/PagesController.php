@@ -69,7 +69,7 @@ class PagesController extends Controller
     {
 
 
-        dd($request);
+     
   
         $this->validate($request, [
             'first_name' => ['required', 'string', 'max:255' ], 

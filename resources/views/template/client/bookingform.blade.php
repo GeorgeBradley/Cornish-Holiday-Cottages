@@ -1,5 +1,5 @@
 @component('mail::message')
-# {{$enquiry_title}}
+# {{$property_name}}
 
 ## {{$message}}
 

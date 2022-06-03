@@ -31,7 +31,7 @@ class BookingFormMail extends Mailable
         return $this->from('mail@ws239618-awt.remote.ac')
         ->markdown('template.client.bookingform')
         ->with([
-                'enquiry_title' => $this->user['enquiry_title'],
+       
         
                 'email' => $this->user['email'],
                 'first_name' => $this->user['first_name'],
