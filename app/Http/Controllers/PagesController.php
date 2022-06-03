@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\BookingForm;
+use App\Mail\BookingFormMail;
 use App\Models\website_info;
 use Illuminate\Http\Request;
 use App\Mail\ContactFormMail;
@@ -40,7 +40,6 @@ class PagesController extends Controller
     public function send_mail(Request $request)
     {
 
-  
         $this->validate($request, [
             'first_name' => ['required', 'string', 'max:255' ], 
             'last_name' => ['required', 'string', 'max:255' ], 
@@ -70,16 +69,17 @@ class PagesController extends Controller
     {
 
 
-
+        dd($request);
   
         $this->validate($request, [
             'first_name' => ['required', 'string', 'max:255' ], 
             'last_name' => ['required', 'string', 'max:255' ], 
-            'date_from' => ['required', 'string', 'max:255' ], 
-            'property_name' => ['required', 'string', 'max:255' ], 
-            'date_to' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255'],
-            'enquiry_title' => ['required', 'string', 'max:255' ], 
+            'property_name' => ['required', 'string', 'max:255' ], 
+            'date_from' => ['required', 'date', 'max:255' ], 
+            'date_to' => ['required', 'date', 'max:255'],
+
+       
             'message' => ['required', 'string', 'max:255']
         ]);
 
@@ -90,13 +90,13 @@ class PagesController extends Controller
             'date_from' => $request['date_from'], 
             'date_to' => $request['date_to'], 
             'email' => $request['email'],
-            'enquiry_title' => $request['enquiry_title'],
+
             'message' => $request['message'],
           
         ];
 
     
-        Mail::to('mail@ws239618-awt.remote.ac')->send(new BookingForm($contact));
+        Mail::to('mail@ws239618-awt.remote.ac')->send(new BookingFormMail($contact));
         
         return redirect()->route('booking')->with(['status' => 'Your message has been sent!']);
     }

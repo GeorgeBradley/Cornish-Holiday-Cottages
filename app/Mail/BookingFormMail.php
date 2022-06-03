@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class BookingForm extends Mailable
+class BookingFormMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -29,7 +29,7 @@ class BookingForm extends Mailable
     public function build()
     {
         return $this->from('mail@ws239618-awt.remote.ac')
-        ->markdown('template.client.booking_form')
+        ->markdown('template.client.bookingform')
         ->with([
                 'enquiry_title' => $this->user['enquiry_title'],
         
