@@ -41,7 +41,7 @@
             
             <div class="flex flex-fd-c gap-1">
                 <label for="">Your Email</label>
-                <input type="email" class="p-1">
+                <input type="email" name="email" class="p-1">
                 @error('email')
                 <div class="error-message-container">
                     <p class="error-message">{{ $message }}</p>
