@@ -69,6 +69,8 @@ class PagesController extends Controller
     public function send_booking_mail(Request $request)
     {
 
+
+
   
         $this->validate($request, [
             'first_name' => ['required', 'string', 'max:255' ], 

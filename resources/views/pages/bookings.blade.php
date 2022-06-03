@@ -7,13 +7,15 @@
 
 <div class="social flex flex-jc-sb flex-fw-w w-100 gap-4 flex-jc-c">
 
-    <section class="m-t-3 container m-b-2" id="booking">
+    <section class="m-t-3 container m-b-2 booking-section" id="booking">
 
         <h2>Booking Enquiry</h2>
-        <div class="social flex flex-jc-c flex-fw-w w-100">
+
          
-            <form action="{{ route('addBooking') }}" method="POST" class="contact-form flex flex-jc-c flex-fd-c flex-fs-1 mw-100">
+            <form action="{{ route('addBooking') }}" method="POST" class="booking-form flex flex-jc-s flex-fd-c flex-fs-1 mw-100">
             
+                    @csrf
+
                 <div class="flex flex-fw-w gap-1">
                     <div class="flex flex-fd-c flex-fg-1 gap-1">
                         <label for="">First Name</label>
@@ -49,7 +51,7 @@
             
             <div class="flex flex-fd-c gap-1">
                 <label for="">Interested in the property:</label>
-                <input type="text" name="property_name" value="" class="p-1" readonly>
+                <input type="text" name="property_name" value="" class="p-1">
                 @error('property_name')
                     <div class="error-message-container">
                         <p class="error-message">{{ $message }}</p>
@@ -94,7 +96,7 @@
             
             <button type="submit" class="submit">Send</button>
             </form>    
-        </div>
+        
         
         
         

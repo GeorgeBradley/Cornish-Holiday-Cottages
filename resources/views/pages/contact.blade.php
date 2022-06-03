@@ -5,8 +5,8 @@
 
 <section class="m-t-3 container m-b-2">
 
-<div class="social flex flex-jc-sb flex-fw-w w-100 gap-4 flex-jc-c">
-<div class="flex social-links flex-fd-c flex-jc-c gap-4">
+<div class="social flex flex-jc-sb flex-fw-w w-100 gap-4 flex-jc-s vh-100">
+<div class="flex social-links flex-fd-c gap-4">
 
     <div class="flex flex-fd-c w-100 flex-jc-s gap-4">
         <h3>Contact us</h3>
@@ -26,7 +26,7 @@
     </div>
 </div>
 
-    <form method="POST" action="{{ route('addContact') }}"  class="contact-form flex flex-jc-c flex-fd-c flex-fs-1 mw-100">
+    <form method="POST" action="{{ route('addContact') }}"  class="contact-form flex flex-jc-s flex-fd-c flex-fs-1 mw-100">
         @csrf
         <div class="flex flex-fw-w gap-1">
             <div class="flex flex-fd-c flex-fg-1 gap-1">

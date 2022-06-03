@@ -1,34 +1,55 @@
-.contact-form {
+.contact-form, .booking-form {
 
 
     gap:1rem;
-    max-width:400px;
+  
     width:100%;
     margin:0;
     width:100%;
-   
+    max-width:400px;
    
 }
-
+.contact-form {
+  
+}
+.booking-form {
+    justify-self: flex-start;
+    max-width:600px !important;
+    margin: 0 auto;
+    width:100%;
+}
+.social {
+    margin:0 auto !important;
+}
 .contact-form input:focus {
     outline:1px solid rgb(0, 136, 255);
 
     border:1px solid #fff;
 }
-.contact-form input {
+.contact-form input, .booking-form input {
     padding:.6rem;
     border:1px solid #ccc;
     border-radius:5px;
 
 }
-.contact-form textarea {
+.contact-form textarea, .booking-form textarea {
     border:1px solid #ccc;
     border-radius:5px;
+    padding:1rem;
 }
-.contact-form button {
+.contact-form button, .booking-form button {
     padding:1rem;
     background-color:#9459cc;
     color:#ffff;
+    border:none;
+    font-weight:bold;
+    font-size:1.2rem;
+}
+.contact-form button:hover, .booking-form button:hover {
+    padding:1rem;
+    background-color:#ac79dd;
+    color:#ffff;
+    cursor: pointer;
     border:none;
     font-weight:bold;
     font-size:1.2rem;
