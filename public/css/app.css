@@ -1207,7 +1207,7 @@ img {
   }
 }
 .vh-100 {
-  height: 100vh;
+  min-height: 100vh;
 }
 @media (min-width: 36em) {
   .vh-100-sm {
@@ -3113,7 +3113,7 @@ footer .sm-links i {
 
 .booking-section {
   width: 100%;
-  height: 100vh !important;
+  min-height: 100vh !important;
   display: flex !important;
   flex-direction: column;
 }
