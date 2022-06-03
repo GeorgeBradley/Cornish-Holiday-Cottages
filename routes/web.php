@@ -50,3 +50,5 @@ Route::post('/logout', [LogoutController::class, 'perform'])->name('logout');
 
 
 Route::post('/contact', [PagesController::class, 'send_mail'])->name('addContact');
+
+Route::post('/contact', [PagesController::class, 'send_booking_mail'])->name('send_booking_mail');

@@ -71,7 +71,7 @@
     @enderror
     </div>
     <div class="flex flex-fd-c gap-1">
-        <label for="">Enquiry Message</label>
+        <label for="">Message</label>
         <textarea id="" cols="30" rows="10" name="message"></textarea>
         @error('message')
         <div class="error-message-container">

@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class ContactMail extends Mailable
+class BookingForm extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,6 +28,14 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.contact');
+        return $this->from('mail@ws239618-awt.remote.ac')
+        ->markdown('template.client.contactform')
+        ->with([
+                'enquiry_title' => $this->user['enquiry_title'],
+                'message' => $this->user['message'],
+                'email' => $this->user['email'],
+                'first_name' => $this->user['first_name'],
+                'last_name' => $this->user['last_name'],
+            ]);
     }
 }
