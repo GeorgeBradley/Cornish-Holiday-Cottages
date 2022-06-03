@@ -52,9 +52,8 @@
         <div class="header-menu-dropdown has-fade">
             <a href="{{ route('landing-page') }}">Home</a>
             <a href="{{ route('properties') }}">Properties</a>
-            <a href="#">Details</a>
-            <a href="#">Bookings</a>
-            <a href="#">Contact</a>
+            <a href="{{ route('booking') }}">Bookings</a>
+            <a href="{{ route('contact') }}">Contact</a>
             @auth
             <form action="{{ route('logout') }}" method="POST">
                 @csrf
